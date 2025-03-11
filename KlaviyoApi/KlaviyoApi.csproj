@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageId>Starshipit.KlaviyoApi</PackageId>
-        <Version>1.2.0</Version>
+        <Version>1.3.0</Version>
         <Authors>Starshipit</Authors>
         <Company>Starshipit</Company>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
