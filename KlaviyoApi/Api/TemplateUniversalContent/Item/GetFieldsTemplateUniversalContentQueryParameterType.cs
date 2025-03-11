@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Klaviyo.Api.TemplateUniversalContent.Item
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public enum GetFieldsTemplateUniversalContentQueryParameterType
     #pragma warning restore CS1591
@@ -32,6 +32,14 @@ namespace Klaviyo.Api.TemplateUniversalContent.Item
         #pragma warning disable CS1591
         DefinitionDataContent,
         #pragma warning restore CS1591
+        [EnumMember(Value = "definition.data.content.href")]
+        #pragma warning disable CS1591
+        DefinitionDataContentHref,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.data.content.text")]
+        #pragma warning disable CS1591
+        DefinitionDataContentText,
+        #pragma warning restore CS1591
         [EnumMember(Value = "definition.data.display_options")]
         #pragma warning disable CS1591
         DefinitionDataDisplay_options,
@@ -59,6 +67,10 @@ namespace Klaviyo.Api.TemplateUniversalContent.Item
         [EnumMember(Value = "definition.data.styles")]
         #pragma warning disable CS1591
         DefinitionDataStyles,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.data.styles.background_color")]
+        #pragma warning disable CS1591
+        DefinitionDataStylesBackground_color,
         #pragma warning restore CS1591
         [EnumMember(Value = "definition.data.styles.block_background_color")]
         #pragma warning disable CS1591
@@ -92,13 +104,17 @@ namespace Klaviyo.Api.TemplateUniversalContent.Item
         #pragma warning disable CS1591
         DefinitionDataStylesBlock_padding_top,
         #pragma warning restore CS1591
+        [EnumMember(Value = "definition.data.styles.border_radius")]
+        #pragma warning disable CS1591
+        DefinitionDataStylesBorder_radius,
+        #pragma warning restore CS1591
         [EnumMember(Value = "definition.data.styles.color")]
         #pragma warning disable CS1591
         DefinitionDataStylesColor,
         #pragma warning restore CS1591
-        [EnumMember(Value = "definition.data.styles.extra_css_class")]
+        [EnumMember(Value = "definition.data.styles.drop_shadow_color")]
         #pragma warning disable CS1591
-        DefinitionDataStylesExtra_css_class,
+        DefinitionDataStylesDrop_shadow_color,
         #pragma warning restore CS1591
         [EnumMember(Value = "definition.data.styles.font_family")]
         #pragma warning disable CS1591
@@ -132,21 +148,17 @@ namespace Klaviyo.Api.TemplateUniversalContent.Item
         #pragma warning disable CS1591
         DefinitionDataStylesInner_padding_top,
         #pragma warning restore CS1591
-        [EnumMember(Value = "definition.data.styles.mobile_stretch_content")]
-        #pragma warning disable CS1591
-        DefinitionDataStylesMobile_stretch_content,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "definition.data.styles.background_color")]
-        #pragma warning disable CS1591
-        DefinitionDataStylesBackground_color,
-        #pragma warning restore CS1591
         [EnumMember(Value = "definition.data.styles.letter_spacing")]
         #pragma warning disable CS1591
         DefinitionDataStylesLetter_spacing,
         #pragma warning restore CS1591
-        [EnumMember(Value = "definition.data.styles.line_height")]
+        [EnumMember(Value = "definition.data.styles.mobile_stretch_content")]
         #pragma warning disable CS1591
-        DefinitionDataStylesLine_height,
+        DefinitionDataStylesMobile_stretch_content,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.data.styles.stretch")]
+        #pragma warning disable CS1591
+        DefinitionDataStylesStretch,
         #pragma warning restore CS1591
         [EnumMember(Value = "definition.data.styles.text_align")]
         #pragma warning disable CS1591
@@ -155,6 +167,34 @@ namespace Klaviyo.Api.TemplateUniversalContent.Item
         [EnumMember(Value = "definition.data.styles.text_decoration")]
         #pragma warning disable CS1591
         DefinitionDataStylesText_decoration,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.data.styles.shadow_color")]
+        #pragma warning disable CS1591
+        DefinitionDataStylesShadow_color,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.data.styles.border_color")]
+        #pragma warning disable CS1591
+        DefinitionDataStylesBorder_color,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.data.styles.border_style")]
+        #pragma warning disable CS1591
+        DefinitionDataStylesBorder_style,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.data.styles.border_width")]
+        #pragma warning disable CS1591
+        DefinitionDataStylesBorder_width,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.data.styles.height")]
+        #pragma warning disable CS1591
+        DefinitionDataStylesHeight,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.data.styles.extra_css_class")]
+        #pragma warning disable CS1591
+        DefinitionDataStylesExtra_css_class,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.data.styles.line_height")]
+        #pragma warning disable CS1591
+        DefinitionDataStylesLine_height,
         #pragma warning restore CS1591
         [EnumMember(Value = "definition.data.styles.text_table_layout")]
         #pragma warning disable CS1591

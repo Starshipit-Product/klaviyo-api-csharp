@@ -8,7 +8,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class ProfileSubscriptionCreateQueryResourceObject_attributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -17,7 +17,7 @@ namespace Klaviyo.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The profile&apos;s date of birth. This field is required to update SMS consent for accounts using age-gating: https://help.klaviyo.com/hc/en-us/articles/17252552814875</summary>
         public Date? AgeGatedDateOfBirth { get; set; }
-        /// <summary>The email address to subscribe or to set on the profile if `channels` is specified and the email channel is omitted.</summary>
+        /// <summary>The email address relating to the email subscription included in `subscriptions`. If the email channel is omitted from `subscriptions`, this will be set on the profile.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Email { get; set; }
@@ -25,7 +25,7 @@ namespace Klaviyo.Models
 #else
         public string Email { get; set; }
 #endif
-        /// <summary>The phone number to subscribe or to set on the profile if `channels` is specified and the SMS channel is omitted. This must be in E.164 format.</summary>
+        /// <summary>The phone number relating to the SMS subscription included in `subscriptions`. If the SMS channel is omitted from `subscriptions`, this will be set on the profile. This must be in E.164 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PhoneNumber { get; set; }

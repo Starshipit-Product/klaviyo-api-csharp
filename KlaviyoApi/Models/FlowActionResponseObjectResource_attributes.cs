@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class FlowActionResponseObjectResource_attributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -119,26 +119,26 @@ namespace Klaviyo.Models
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.EmailTrackingOptions"/>, <see cref="global::Klaviyo.Models.SMSTrackingOptions"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.FlowEmailTrackingOptions"/>, <see cref="global::Klaviyo.Models.FlowsSMSTrackingOptions"/>
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FlowActionResponseObjectResource_attributes_tracking_options : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.EmailTrackingOptions"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.FlowEmailTrackingOptions"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Klaviyo.Models.EmailTrackingOptions? EmailTrackingOptions { get; set; }
+            public global::Klaviyo.Models.FlowEmailTrackingOptions? FlowEmailTrackingOptions { get; set; }
 #nullable restore
 #else
-            public global::Klaviyo.Models.EmailTrackingOptions EmailTrackingOptions { get; set; }
+            public global::Klaviyo.Models.FlowEmailTrackingOptions FlowEmailTrackingOptions { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.SMSTrackingOptions"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.FlowsSMSTrackingOptions"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Klaviyo.Models.SMSTrackingOptions? SMSTrackingOptions { get; set; }
+            public global::Klaviyo.Models.FlowsSMSTrackingOptions? FlowsSMSTrackingOptions { get; set; }
 #nullable restore
 #else
-            public global::Klaviyo.Models.SMSTrackingOptions SMSTrackingOptions { get; set; }
+            public global::Klaviyo.Models.FlowsSMSTrackingOptions FlowsSMSTrackingOptions { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -150,13 +150,13 @@ namespace Klaviyo.Models
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
                 var result = new global::Klaviyo.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options();
-                if("EmailTrackingOptions".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                if("FlowEmailTrackingOptions".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.EmailTrackingOptions = new global::Klaviyo.Models.EmailTrackingOptions();
+                    result.FlowEmailTrackingOptions = new global::Klaviyo.Models.FlowEmailTrackingOptions();
                 }
-                else if("SMSTrackingOptions".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                else if("FlowsSMSTrackingOptions".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.SMSTrackingOptions = new global::Klaviyo.Models.SMSTrackingOptions();
+                    result.FlowsSMSTrackingOptions = new global::Klaviyo.Models.FlowsSMSTrackingOptions();
                 }
                 return result;
             }
@@ -166,13 +166,13 @@ namespace Klaviyo.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(EmailTrackingOptions != null)
+                if(FlowEmailTrackingOptions != null)
                 {
-                    return EmailTrackingOptions.GetFieldDeserializers();
+                    return FlowEmailTrackingOptions.GetFieldDeserializers();
                 }
-                else if(SMSTrackingOptions != null)
+                else if(FlowsSMSTrackingOptions != null)
                 {
-                    return SMSTrackingOptions.GetFieldDeserializers();
+                    return FlowsSMSTrackingOptions.GetFieldDeserializers();
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -183,13 +183,13 @@ namespace Klaviyo.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
-                if(EmailTrackingOptions != null)
+                if(FlowEmailTrackingOptions != null)
                 {
-                    writer.WriteObjectValue<global::Klaviyo.Models.EmailTrackingOptions>(null, EmailTrackingOptions);
+                    writer.WriteObjectValue<global::Klaviyo.Models.FlowEmailTrackingOptions>(null, FlowEmailTrackingOptions);
                 }
-                else if(SMSTrackingOptions != null)
+                else if(FlowsSMSTrackingOptions != null)
                 {
-                    writer.WriteObjectValue<global::Klaviyo.Models.SMSTrackingOptions>(null, SMSTrackingOptions);
+                    writer.WriteObjectValue<global::Klaviyo.Models.FlowsSMSTrackingOptions>(null, FlowsSMSTrackingOptions);
                 }
             }
         }

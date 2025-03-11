@@ -10,7 +10,7 @@ namespace Klaviyo.Models
     /// <summary>
     /// The context for the template render. This must be a JSON object which has values for any tags used in the template. See [this doc](https://help.klaviyo.com/hc/en-us/articles/4408802648731) for more details.
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TemplateRenderQueryResourceObject_attributes_context : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

@@ -10,7 +10,7 @@ namespace Klaviyo.Models
     /// <summary>
     /// Array of profiles to create or update
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProfileImportJobCreateQueryResourceObject_attributes_profiles : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

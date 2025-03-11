@@ -15,7 +15,7 @@ namespace Klaviyo.Api.Metrics
     /// <summary>
     /// Builds and executes requests for operations under \api\metrics
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MetricsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Klaviyo.api.metrics.item collection</summary>
@@ -102,10 +102,10 @@ namespace Klaviyo.Api.Metrics
         /// <summary>
         /// Get all metrics in an account.Requests can be filtered by the following fields:integration `name`, integration `category`Returns a maximum of 200 results per page.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`metrics:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MetricsRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsflowAsGetFieldsFlowQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -116,7 +116,7 @@ namespace Klaviyo.Api.Metrics
             [QueryParameter("fields%5Bflow%5D")]
             public string[] Fieldsflow { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bflow%5D")]
@@ -126,7 +126,7 @@ namespace Klaviyo.Api.Metrics
             [QueryParameter("fields%5Bflow%5D")]
             public global::Klaviyo.Api.Metrics.GetFieldsFlowQueryParameterType[] FieldsflowAsGetFieldsFlowQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsmetricAsGetFieldsMetricQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -137,7 +137,7 @@ namespace Klaviyo.Api.Metrics
             [QueryParameter("fields%5Bmetric%5D")]
             public string[] Fieldsmetric { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bmetric%5D")]
@@ -147,7 +147,7 @@ namespace Klaviyo.Api.Metrics
             [QueryParameter("fields%5Bmetric%5D")]
             public global::Klaviyo.Api.Metrics.GetFieldsMetricQueryParameterType[] FieldsmetricAsGetFieldsMetricQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`integration.name`: `equals`&lt;br&gt;`integration.category`: `equals`</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`integration.name`: `equals`&lt;br&gt;`integration.category`: `equals`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -157,7 +157,7 @@ namespace Klaviyo.Api.Metrics
             [QueryParameter("filter")]
             public string Filter { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
             [Obsolete("This property is deprecated, use IncludeAsGetIncludeQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -168,7 +168,7 @@ namespace Klaviyo.Api.Metrics
             [QueryParameter("include")]
             public string[] Include { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include")]
@@ -178,7 +178,7 @@ namespace Klaviyo.Api.Metrics
             [QueryParameter("include")]
             public global::Klaviyo.Api.Metrics.GetIncludeQueryParameterType[] IncludeAsGetIncludeQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#pagination</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#pagination</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page%5Bcursor%5D")]
@@ -193,7 +193,7 @@ namespace Klaviyo.Api.Metrics
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MetricsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.Metrics.MetricsRequestBuilder.MetricsRequestBuilderGetQueryParameters>
         {
         }

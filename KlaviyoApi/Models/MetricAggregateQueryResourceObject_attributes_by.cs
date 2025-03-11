@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>Supported dimensions for grouping and filtering</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum MetricAggregateQueryResourceObject_attributes_by
     {
         [EnumMember(Value = "$attributed_channel")]

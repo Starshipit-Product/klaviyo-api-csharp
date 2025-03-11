@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>The name of the SDK used to create the push token.</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum DeviceMetadata_klaviyo_sdk
     {
         [EnumMember(Value = "android")]

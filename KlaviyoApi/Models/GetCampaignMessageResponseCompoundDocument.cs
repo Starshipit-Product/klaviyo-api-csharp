@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class GetCampaignMessageResponseCompoundDocument : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -17,10 +17,10 @@ namespace Klaviyo.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Klaviyo.Models.CampaignMessageResponseObjectResource? Data { get; set; }
+        public global::Klaviyo.Models.GetCampaignMessageResponseCompoundDocument_data? Data { get; set; }
 #nullable restore
 #else
-        public global::Klaviyo.Models.CampaignMessageResponseObjectResource Data { get; set; }
+        public global::Klaviyo.Models.GetCampaignMessageResponseCompoundDocument_data Data { get; set; }
 #endif
         /// <summary>The included property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Klaviyo.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Klaviyo.Models.CampaignMessageResponseObjectResource>(global::Klaviyo.Models.CampaignMessageResponseObjectResource.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Klaviyo.Models.GetCampaignMessageResponseCompoundDocument_data>(global::Klaviyo.Models.GetCampaignMessageResponseCompoundDocument_data.CreateFromDiscriminatorValue); } },
                 { "included", n => { Included = n.GetCollectionOfObjectValues<global::Klaviyo.Models.GetCampaignMessageResponseCompoundDocument.GetCampaignMessageResponseCompoundDocument_included>(global::Klaviyo.Models.GetCampaignMessageResponseCompoundDocument.GetCampaignMessageResponseCompoundDocument_included.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,14 +66,14 @@ namespace Klaviyo.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Klaviyo.Models.CampaignMessageResponseObjectResource>("data", Data);
+            writer.WriteObjectValue<global::Klaviyo.Models.GetCampaignMessageResponseCompoundDocument_data>("data", Data);
             writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.GetCampaignMessageResponseCompoundDocument.GetCampaignMessageResponseCompoundDocument_included>("included", Included);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.CampaignResponseObjectResource"/>, <see cref="global::Klaviyo.Models.TemplateResponseObjectResource"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.CampaignResponseObjectResource"/>, <see cref="global::Klaviyo.Models.ImageResponseObjectResource"/>, <see cref="global::Klaviyo.Models.TemplateResponseObjectResource"/>
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class GetCampaignMessageResponseCompoundDocument_included : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.CampaignResponseObjectResource"/></summary>
@@ -83,6 +83,14 @@ namespace Klaviyo.Models
 #nullable restore
 #else
             public global::Klaviyo.Models.CampaignResponseObjectResource CampaignResponseObjectResource { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ImageResponseObjectResource"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.ImageResponseObjectResource? ImageResponseObjectResource { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.ImageResponseObjectResource ImageResponseObjectResource { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.TemplateResponseObjectResource"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -106,6 +114,10 @@ namespace Klaviyo.Models
                 {
                     result.CampaignResponseObjectResource = new global::Klaviyo.Models.CampaignResponseObjectResource();
                 }
+                else if("ImageResponseObjectResource".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ImageResponseObjectResource = new global::Klaviyo.Models.ImageResponseObjectResource();
+                }
                 else if("TemplateResponseObjectResource".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.TemplateResponseObjectResource = new global::Klaviyo.Models.TemplateResponseObjectResource();
@@ -121,6 +133,10 @@ namespace Klaviyo.Models
                 if(CampaignResponseObjectResource != null)
                 {
                     return CampaignResponseObjectResource.GetFieldDeserializers();
+                }
+                else if(ImageResponseObjectResource != null)
+                {
+                    return ImageResponseObjectResource.GetFieldDeserializers();
                 }
                 else if(TemplateResponseObjectResource != null)
                 {
@@ -138,6 +154,10 @@ namespace Klaviyo.Models
                 if(CampaignResponseObjectResource != null)
                 {
                     writer.WriteObjectValue<global::Klaviyo.Models.CampaignResponseObjectResource>(null, CampaignResponseObjectResource);
+                }
+                else if(ImageResponseObjectResource != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.ImageResponseObjectResource>(null, ImageResponseObjectResource);
                 }
                 else if(TemplateResponseObjectResource != null)
                 {

@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class NoSMSMarketingUnsubscribed : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -67,7 +67,7 @@ namespace Klaviyo.Models
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.BulkRemoveMethodFilter"/>, <see cref="global::Klaviyo.Models.CarrierDeactivationMethodFilter"/>, <see cref="global::Klaviyo.Models.CheckoutMethodFilter"/>, <see cref="global::Klaviyo.Models.FailedAgeGateMethodFilter"/>, <see cref="global::Klaviyo.Models.FormMethodFilter"/>, <see cref="global::Klaviyo.Models.InboundMessageMethodFilter"/>, <see cref="global::Klaviyo.Models.ManualAddMethodFilter"/>, <see cref="global::Klaviyo.Models.ManualImportMethodFilter"/>, <see cref="global::Klaviyo.Models.ManualRemoveMethodFilter"/>, <see cref="global::Klaviyo.Models.MessageBlockedMethodFilter"/>, <see cref="global::Klaviyo.Models.PreferencePageMethodFilter"/>, <see cref="global::Klaviyo.Models.ProvidedLandlineMethodFilter"/>, <see cref="global::Klaviyo.Models.ProvidedNoAgeMethodFilter"/>, <see cref="global::Klaviyo.Models.SftpMethodFilter"/>, <see cref="global::Klaviyo.Models.ShopifyIntegrationMethodFilter"/>, <see cref="global::Klaviyo.Models.StatusDateFilter"/>
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class NoSMSMarketingUnsubscribed_filters : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.BulkRemoveMethodFilter"/></summary>

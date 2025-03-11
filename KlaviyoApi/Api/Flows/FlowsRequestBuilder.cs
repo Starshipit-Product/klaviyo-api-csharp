@@ -15,7 +15,7 @@ namespace Klaviyo.Api.Flows
     /// <summary>
     /// Builds and executes requests for operations under \api\flows
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FlowsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Klaviyo.api.flows.item collection</summary>
@@ -35,7 +35,7 @@ namespace Klaviyo.Api.Flows
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FlowsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/flows{?fields%5Bflow%2Daction%5D,fields%5Bflow%5D,fields%5Btag%5D,filter*,include,page%5Bcursor%5D*,page%5Bsize%5D*,sort*}", pathParameters)
+        public FlowsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/flows{?additional%2Dfields%5Bflow%5D,fields%5Bflow%2Daction%5D,fields%5Bflow%5D,fields%5Btag%5D,filter*,include,page%5Bcursor%5D*,page%5Bsize%5D*,sort*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Klaviyo.Api.Flows
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FlowsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/flows{?fields%5Bflow%2Daction%5D,fields%5Bflow%5D,fields%5Btag%5D,filter*,include,page%5Bcursor%5D*,page%5Bsize%5D*,sort*}", rawUrl)
+        public FlowsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/flows{?additional%2Dfields%5Bflow%5D,fields%5Bflow%2Daction%5D,fields%5Bflow%5D,fields%5Btag%5D,filter*,include,page%5Bcursor%5D*,page%5Bsize%5D*,sort*}", rawUrl)
         {
         }
         /// <summary>
@@ -72,6 +72,33 @@ namespace Klaviyo.Api.Flows
             return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetFlowResponseCollectionCompoundDocument>(requestInfo, global::Klaviyo.Models.GetFlowResponseCollectionCompoundDocument.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
+        /// Create a new flow using an encoded flow definition.New objects within the flow definition, such as actions, will need to use a`temporary_id` field for identification. These will be replaced with traditional `id` fieldsafter successful creation.A successful request will return the new definition to you.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `1/s`&lt;br&gt;Steady: `15/m`&lt;br&gt;Daily: `100/d`**Scopes:**`flows:write`
+        /// </summary>
+        /// <returns>A <see cref="global::Klaviyo.Models.PostFlowV2Response"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Klaviyo.Models.PostFlowV2Response4XXError">When receiving a 4XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.PostFlowV2Response5XXError">When receiving a 5XX status code</exception>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Klaviyo.Models.PostFlowV2Response?> PostAsync(global::Klaviyo.Models.FlowCreateQuery body, Action<RequestConfiguration<global::Klaviyo.Api.Flows.FlowsRequestBuilder.FlowsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Klaviyo.Models.PostFlowV2Response> PostAsync(global::Klaviyo.Models.FlowCreateQuery body, Action<RequestConfiguration<global::Klaviyo.Api.Flows.FlowsRequestBuilder.FlowsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            _ = body ?? throw new ArgumentNullException(nameof(body));
+            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "4XX", global::Klaviyo.Models.PostFlowV2Response4XXError.CreateFromDiscriminatorValue },
+                { "5XX", global::Klaviyo.Models.PostFlowV2Response5XXError.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Klaviyo.Models.PostFlowV2Response>(requestInfo, global::Klaviyo.Models.PostFlowV2Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
         /// Get all flows in an account.Returns a maximum of 50 flows per request, which can be paginated with cursor-based pagination.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`flows:read`
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
@@ -91,6 +118,28 @@ namespace Klaviyo.Api.Flows
             return requestInfo;
         }
         /// <summary>
+        /// Create a new flow using an encoded flow definition.New objects within the flow definition, such as actions, will need to use a`temporary_id` field for identification. These will be replaced with traditional `id` fieldsafter successful creation.A successful request will return the new definition to you.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `1/s`&lt;br&gt;Steady: `15/m`&lt;br&gt;Daily: `100/d`**Scopes:**`flows:write`
+        /// </summary>
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToPostRequestInformation(global::Klaviyo.Models.FlowCreateQuery body, Action<RequestConfiguration<global::Klaviyo.Api.Flows.FlowsRequestBuilder.FlowsRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToPostRequestInformation(global::Klaviyo.Models.FlowCreateQuery body, Action<RequestConfiguration<global::Klaviyo.Api.Flows.FlowsRequestBuilder.FlowsRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            _ = body ?? throw new ArgumentNullException(nameof(body));
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/vnd.api+json");
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/vnd.api+json", body);
+            return requestInfo;
+        }
+        /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
         /// <returns>A <see cref="global::Klaviyo.Api.Flows.FlowsRequestBuilder"/></returns>
@@ -102,10 +151,10 @@ namespace Klaviyo.Api.Flows
         /// <summary>
         /// Get all flows in an account.Returns a maximum of 50 flows per request, which can be paginated with cursor-based pagination.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`flows:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FlowsRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsflowAsGetFieldsFlowQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -116,7 +165,7 @@ namespace Klaviyo.Api.Flows
             [QueryParameter("fields%5Bflow%5D")]
             public string[] Fieldsflow { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsflowActionAsGetFieldsFlowActionQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -127,7 +176,7 @@ namespace Klaviyo.Api.Flows
             [QueryParameter("fields%5Bflow%2Daction%5D")]
             public string[] FieldsflowAction { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bflow%2Daction%5D")]
@@ -137,7 +186,7 @@ namespace Klaviyo.Api.Flows
             [QueryParameter("fields%5Bflow%2Daction%5D")]
             public global::Klaviyo.Api.Flows.GetFieldsFlowActionQueryParameterType[] FieldsflowActionAsGetFieldsFlowActionQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bflow%5D")]
@@ -147,7 +196,7 @@ namespace Klaviyo.Api.Flows
             [QueryParameter("fields%5Bflow%5D")]
             public global::Klaviyo.Api.Flows.GetFieldsFlowQueryParameterType[] FieldsflowAsGetFieldsFlowQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldstagAsGetFieldsTagQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -158,7 +207,7 @@ namespace Klaviyo.Api.Flows
             [QueryParameter("fields%5Btag%5D")]
             public string[] Fieldstag { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Btag%5D")]
@@ -168,7 +217,7 @@ namespace Klaviyo.Api.Flows
             [QueryParameter("fields%5Btag%5D")]
             public global::Klaviyo.Api.Flows.GetFieldsTagQueryParameterType[] FieldstagAsGetFieldsTagQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`id`: `any`&lt;br&gt;`name`: `contains`, `ends-with`, `equals`, `starts-with`&lt;br&gt;`status`: `equals`&lt;br&gt;`archived`: `equals`&lt;br&gt;`created`: `equals`, `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`updated`: `equals`, `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`trigger_type`: `equals`</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`id`: `any`&lt;br&gt;`name`: `contains`, `ends-with`, `equals`, `starts-with`&lt;br&gt;`status`: `equals`&lt;br&gt;`archived`: `equals`&lt;br&gt;`created`: `equals`, `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`updated`: `equals`, `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`trigger_type`: `equals`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -178,7 +227,7 @@ namespace Klaviyo.Api.Flows
             [QueryParameter("filter")]
             public string Filter { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
             [Obsolete("This property is deprecated, use IncludeAsGetIncludeQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -189,7 +238,7 @@ namespace Klaviyo.Api.Flows
             [QueryParameter("include")]
             public string[] Include { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include")]
@@ -199,7 +248,7 @@ namespace Klaviyo.Api.Flows
             [QueryParameter("include")]
             public global::Klaviyo.Api.Flows.GetIncludeQueryParameterType[] IncludeAsGetIncludeQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#pagination</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#pagination</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page%5Bcursor%5D")]
@@ -212,7 +261,7 @@ namespace Klaviyo.Api.Flows
             /// <summary>Default: 50. Min: 1. Max: 50.</summary>
             [QueryParameter("page%5Bsize%5D")]
             public int? Pagesize { get; set; }
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -223,7 +272,7 @@ namespace Klaviyo.Api.Flows
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [QueryParameter("sort")]
             public global::Klaviyo.Api.Flows.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
         }
@@ -231,8 +280,44 @@ namespace Klaviyo.Api.Flows
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FlowsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.Flows.FlowsRequestBuilder.FlowsRequestBuilderGetQueryParameters>
+        {
+        }
+        /// <summary>
+        /// Create a new flow using an encoded flow definition.New objects within the flow definition, such as actions, will need to use a`temporary_id` field for identification. These will be replaced with traditional `id` fieldsafter successful creation.A successful request will return the new definition to you.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `1/s`&lt;br&gt;Steady: `15/m`&lt;br&gt;Daily: `100/d`**Scopes:**`flows:write`
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class FlowsRequestBuilderPostQueryParameters 
+        {
+            /// <summary>Request additional fields not included by default in the response. Supported values: &apos;definition&apos;</summary>
+            [Obsolete("This property is deprecated, use AdditionalFieldsflowAsPostAdditionalFieldsFlowQueryParameterType instead")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("additional%2Dfields%5Bflow%5D")]
+            public string[]? AdditionalFieldsflow { get; set; }
+#nullable restore
+#else
+            [QueryParameter("additional%2Dfields%5Bflow%5D")]
+            public string[] AdditionalFieldsflow { get; set; }
+#endif
+            /// <summary>Request additional fields not included by default in the response. Supported values: &apos;definition&apos;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("additional%2Dfields%5Bflow%5D")]
+            public global::Klaviyo.Api.Flows.PostAdditionalFieldsFlowQueryParameterType[]? AdditionalFieldsflowAsPostAdditionalFieldsFlowQueryParameterType { get; set; }
+#nullable restore
+#else
+            [QueryParameter("additional%2Dfields%5Bflow%5D")]
+            public global::Klaviyo.Api.Flows.PostAdditionalFieldsFlowQueryParameterType[] AdditionalFieldsflowAsPostAdditionalFieldsFlowQueryParameterType { get; set; }
+#endif
+        }
+        /// <summary>
+        /// Configuration for the request such as headers, query parameters, and middleware options.
+        /// </summary>
+        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class FlowsRequestBuilderPostRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.Flows.FlowsRequestBuilder.FlowsRequestBuilderPostQueryParameters>
         {
         }
     }

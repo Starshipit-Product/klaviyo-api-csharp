@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>The API status of our coupon codes.</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CouponCodeUpdateQueryResourceObject_attributes_status
     {
         [EnumMember(Value = "ASSIGNED_TO_PROFILE")]

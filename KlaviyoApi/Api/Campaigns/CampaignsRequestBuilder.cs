@@ -15,7 +15,7 @@ namespace Klaviyo.Api.Campaigns
     /// <summary>
     /// Builds and executes requests for operations under \api\campaigns
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CampaignsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Klaviyo.api.campaigns.item collection</summary>
@@ -47,7 +47,7 @@ namespace Klaviyo.Api.Campaigns
         {
         }
         /// <summary>
-        /// Returns some or all campaigns based on filters.A channel filter is required to list campaigns. Please provide either:`?filter=equals(messages.channel,&apos;email&apos;)` to list email campaigns, or`?filter=equals(messages.channel,&apos;sms&apos;)` to list SMS campaigns.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`campaigns:read`
+        /// Returns some or all campaigns based on filters.A channel filter is required to list campaigns. Please provide either:`?filter=equals(messages.channel,&apos;email&apos;)` to list email campaigns, or`?filter=equals(messages.channel,&apos;sms&apos;)` to list SMS campaigns.`?filter=equals(messages.channel,&apos;mobile_push&apos;)` to list mobile push campaigns.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`campaigns:read`
         /// </summary>
         /// <returns>A <see cref="global::Klaviyo.Models.GetCampaignResponseCollectionCompoundDocument"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -99,7 +99,7 @@ namespace Klaviyo.Api.Campaigns
             return await RequestAdapter.SendAsync<global::Klaviyo.Models.PostCampaignResponse>(requestInfo, global::Klaviyo.Models.PostCampaignResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns some or all campaigns based on filters.A channel filter is required to list campaigns. Please provide either:`?filter=equals(messages.channel,&apos;email&apos;)` to list email campaigns, or`?filter=equals(messages.channel,&apos;sms&apos;)` to list SMS campaigns.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`campaigns:read`
+        /// Returns some or all campaigns based on filters.A channel filter is required to list campaigns. Please provide either:`?filter=equals(messages.channel,&apos;email&apos;)` to list email campaigns, or`?filter=equals(messages.channel,&apos;sms&apos;)` to list SMS campaigns.`?filter=equals(messages.channel,&apos;mobile_push&apos;)` to list mobile push campaigns.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`campaigns:read`
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -149,12 +149,12 @@ namespace Klaviyo.Api.Campaigns
             return new global::Klaviyo.Api.Campaigns.CampaignsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns some or all campaigns based on filters.A channel filter is required to list campaigns. Please provide either:`?filter=equals(messages.channel,&apos;email&apos;)` to list email campaigns, or`?filter=equals(messages.channel,&apos;sms&apos;)` to list SMS campaigns.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`campaigns:read`
+        /// Returns some or all campaigns based on filters.A channel filter is required to list campaigns. Please provide either:`?filter=equals(messages.channel,&apos;email&apos;)` to list email campaigns, or`?filter=equals(messages.channel,&apos;sms&apos;)` to list SMS campaigns.`?filter=equals(messages.channel,&apos;mobile_push&apos;)` to list mobile push campaigns.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`campaigns:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CampaignsRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldscampaignAsGetFieldsCampaignQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -165,7 +165,7 @@ namespace Klaviyo.Api.Campaigns
             [QueryParameter("fields%5Bcampaign%5D")]
             public string[] Fieldscampaign { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bcampaign%5D")]
@@ -175,7 +175,7 @@ namespace Klaviyo.Api.Campaigns
             [QueryParameter("fields%5Bcampaign%5D")]
             public global::Klaviyo.Api.Campaigns.GetFieldsCampaignQueryParameterType[] FieldscampaignAsGetFieldsCampaignQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldscampaignMessageAsGetFieldsCampaignMessageQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -186,7 +186,7 @@ namespace Klaviyo.Api.Campaigns
             [QueryParameter("fields%5Bcampaign%2Dmessage%5D")]
             public string[] FieldscampaignMessage { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bcampaign%2Dmessage%5D")]
@@ -196,7 +196,7 @@ namespace Klaviyo.Api.Campaigns
             [QueryParameter("fields%5Bcampaign%2Dmessage%5D")]
             public global::Klaviyo.Api.Campaigns.GetFieldsCampaignMessageQueryParameterType[] FieldscampaignMessageAsGetFieldsCampaignMessageQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldstagAsGetFieldsTagQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -207,7 +207,7 @@ namespace Klaviyo.Api.Campaigns
             [QueryParameter("fields%5Btag%5D")]
             public string[] Fieldstag { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Btag%5D")]
@@ -217,7 +217,7 @@ namespace Klaviyo.Api.Campaigns
             [QueryParameter("fields%5Btag%5D")]
             public global::Klaviyo.Api.Campaigns.GetFieldsTagQueryParameterType[] FieldstagAsGetFieldsTagQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`messages.channel`: `equals`&lt;br&gt;`name`: `contains`&lt;br&gt;`status`: `any`, `equals`&lt;br&gt;`archived`: `equals`&lt;br&gt;`created_at`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`scheduled_at`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`updated_at`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`messages.channel`: `equals`&lt;br&gt;`name`: `contains`&lt;br&gt;`status`: `any`, `equals`&lt;br&gt;`archived`: `equals`&lt;br&gt;`created_at`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`scheduled_at`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`updated_at`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -227,7 +227,7 @@ namespace Klaviyo.Api.Campaigns
             [QueryParameter("filter")]
             public string Filter { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
             [Obsolete("This property is deprecated, use IncludeAsGetIncludeQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -238,7 +238,7 @@ namespace Klaviyo.Api.Campaigns
             [QueryParameter("include")]
             public string[] Include { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include")]
@@ -248,7 +248,7 @@ namespace Klaviyo.Api.Campaigns
             [QueryParameter("include")]
             public global::Klaviyo.Api.Campaigns.GetIncludeQueryParameterType[] IncludeAsGetIncludeQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#pagination</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#pagination</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page%5Bcursor%5D")]
@@ -258,7 +258,7 @@ namespace Klaviyo.Api.Campaigns
             [QueryParameter("page%5Bcursor%5D")]
             public string Pagecursor { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -269,7 +269,7 @@ namespace Klaviyo.Api.Campaigns
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [QueryParameter("sort")]
             public global::Klaviyo.Api.Campaigns.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
         }
@@ -277,7 +277,7 @@ namespace Klaviyo.Api.Campaigns
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CampaignsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.Campaigns.CampaignsRequestBuilder.CampaignsRequestBuilderGetQueryParameters>
         {
         }
@@ -285,7 +285,7 @@ namespace Klaviyo.Api.Campaigns
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CampaignsRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
         {
         }

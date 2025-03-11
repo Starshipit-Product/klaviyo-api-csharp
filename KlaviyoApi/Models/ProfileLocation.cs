@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class ProfileLocation : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -153,7 +153,7 @@ namespace Klaviyo.Models
         /// <summary>
         /// Composed type wrapper for classes <see cref="double"/>, <see cref="string"/>
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProfileLocation_latitude : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="double"/></summary>
@@ -214,7 +214,7 @@ namespace Klaviyo.Models
         /// <summary>
         /// Composed type wrapper for classes <see cref="double"/>, <see cref="string"/>
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProfileLocation_longitude : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="double"/></summary>

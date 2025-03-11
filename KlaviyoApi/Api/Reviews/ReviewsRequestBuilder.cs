@@ -15,7 +15,7 @@ namespace Klaviyo.Api.Reviews
     /// <summary>
     /// Builds and executes requests for operations under \api\reviews
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ReviewsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Klaviyo.api.reviews.item collection</summary>
@@ -49,27 +49,27 @@ namespace Klaviyo.Api.Reviews
         /// <summary>
         /// Get all reviews.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`reviews:read`
         /// </summary>
-        /// <returns>A <see cref="global::Klaviyo.Models.GetReviewResponseDTO20240715CollectionCompoundDocument"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetReviewResponseDTOCollectionCompoundDocument"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Klaviyo.Models.GetReviewResponseDTO20240715CollectionCompoundDocument4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Klaviyo.Models.GetReviewResponseDTO20240715CollectionCompoundDocument5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetReviewResponseDTOCollectionCompoundDocument4XXError">When receiving a 4XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetReviewResponseDTOCollectionCompoundDocument5XXError">When receiving a 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Klaviyo.Models.GetReviewResponseDTO20240715CollectionCompoundDocument?> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Reviews.ReviewsRequestBuilder.ReviewsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetReviewResponseDTOCollectionCompoundDocument?> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Reviews.ReviewsRequestBuilder.ReviewsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Klaviyo.Models.GetReviewResponseDTO20240715CollectionCompoundDocument> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Reviews.ReviewsRequestBuilder.ReviewsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetReviewResponseDTOCollectionCompoundDocument> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Reviews.ReviewsRequestBuilder.ReviewsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Klaviyo.Models.GetReviewResponseDTO20240715CollectionCompoundDocument4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Klaviyo.Models.GetReviewResponseDTO20240715CollectionCompoundDocument5XXError.CreateFromDiscriminatorValue },
+                { "4XX", global::Klaviyo.Models.GetReviewResponseDTOCollectionCompoundDocument4XXError.CreateFromDiscriminatorValue },
+                { "5XX", global::Klaviyo.Models.GetReviewResponseDTOCollectionCompoundDocument5XXError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetReviewResponseDTO20240715CollectionCompoundDocument>(requestInfo, global::Klaviyo.Models.GetReviewResponseDTO20240715CollectionCompoundDocument.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetReviewResponseDTOCollectionCompoundDocument>(requestInfo, global::Klaviyo.Models.GetReviewResponseDTOCollectionCompoundDocument.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get all reviews.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`reviews:read`
@@ -102,10 +102,10 @@ namespace Klaviyo.Api.Reviews
         /// <summary>
         /// Get all reviews.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`reviews:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ReviewsRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldseventAsGetFieldsEventQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -116,7 +116,7 @@ namespace Klaviyo.Api.Reviews
             [QueryParameter("fields%5Bevent%5D")]
             public string[] Fieldsevent { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bevent%5D")]
@@ -126,7 +126,7 @@ namespace Klaviyo.Api.Reviews
             [QueryParameter("fields%5Bevent%5D")]
             public global::Klaviyo.Api.Reviews.GetFieldsEventQueryParameterType[] FieldseventAsGetFieldsEventQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsreviewAsGetFieldsReviewQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -137,7 +137,7 @@ namespace Klaviyo.Api.Reviews
             [QueryParameter("fields%5Breview%5D")]
             public string[] Fieldsreview { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Breview%5D")]
@@ -147,7 +147,7 @@ namespace Klaviyo.Api.Reviews
             [QueryParameter("fields%5Breview%5D")]
             public global::Klaviyo.Api.Reviews.GetFieldsReviewQueryParameterType[] FieldsreviewAsGetFieldsReviewQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`created`: `greater-or-equal`, `less-or-equal`&lt;br&gt;`rating`: `any`, `equals`, `greater-or-equal`, `less-or-equal`&lt;br&gt;`id`: `any`, `equals`&lt;br&gt;`item.id`: `any`, `equals`&lt;br&gt;`content`: `contains`&lt;br&gt;`status`: `equals`&lt;br&gt;`review_type`: `equals`&lt;br&gt;`verified`: `equals`</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`created`: `greater-or-equal`, `less-or-equal`&lt;br&gt;`rating`: `any`, `equals`, `greater-or-equal`, `less-or-equal`&lt;br&gt;`id`: `any`, `equals`&lt;br&gt;`item.id`: `any`, `equals`&lt;br&gt;`content`: `contains`&lt;br&gt;`status`: `equals`&lt;br&gt;`review_type`: `equals`&lt;br&gt;`verified`: `equals`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -157,7 +157,7 @@ namespace Klaviyo.Api.Reviews
             [QueryParameter("filter")]
             public string Filter { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
             [Obsolete("This property is deprecated, use IncludeAsGetIncludeQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -168,7 +168,7 @@ namespace Klaviyo.Api.Reviews
             [QueryParameter("include")]
             public string[] Include { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include")]
@@ -178,7 +178,7 @@ namespace Klaviyo.Api.Reviews
             [QueryParameter("include")]
             public global::Klaviyo.Api.Reviews.GetIncludeQueryParameterType[] IncludeAsGetIncludeQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#pagination</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#pagination</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page%5Bcursor%5D")]
@@ -191,7 +191,7 @@ namespace Klaviyo.Api.Reviews
             /// <summary>Default: 20. Min: 1. Max: 100.</summary>
             [QueryParameter("page%5Bsize%5D")]
             public int? Pagesize { get; set; }
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -202,7 +202,7 @@ namespace Klaviyo.Api.Reviews
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [QueryParameter("sort")]
             public global::Klaviyo.Api.Reviews.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
         }
@@ -210,7 +210,7 @@ namespace Klaviyo.Api.Reviews
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ReviewsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.Reviews.ReviewsRequestBuilder.ReviewsRequestBuilderGetQueryParameters>
         {
         }

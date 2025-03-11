@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>Operators for list substring filters.</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ListSubstringFilter_operator
     {
         [EnumMember(Value = "contains-substring")]

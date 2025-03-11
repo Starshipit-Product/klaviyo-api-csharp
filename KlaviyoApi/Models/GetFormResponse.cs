@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class GetFormResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -17,10 +17,10 @@ namespace Klaviyo.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Klaviyo.Models.FormResponseObjectResource? Data { get; set; }
+        public global::Klaviyo.Models.GetFormResponse_data? Data { get; set; }
 #nullable restore
 #else
-        public global::Klaviyo.Models.FormResponseObjectResource Data { get; set; }
+        public global::Klaviyo.Models.GetFormResponse_data Data { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Klaviyo.Models.GetFormResponse"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Klaviyo.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Klaviyo.Models.FormResponseObjectResource>(global::Klaviyo.Models.FormResponseObjectResource.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Klaviyo.Models.GetFormResponse_data>(global::Klaviyo.Models.GetFormResponse_data.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Klaviyo.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Klaviyo.Models.FormResponseObjectResource>("data", Data);
+            writer.WriteObjectValue<global::Klaviyo.Models.GetFormResponse_data>("data", Data);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

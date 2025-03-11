@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>Status of the form. A live form with an in-progress draft is considered &quot;live&quot;.</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum FormResponseObjectResource_attributes_status
     {
         [EnumMember(Value = "draft")]

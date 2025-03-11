@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>Status of the asynchronous job.</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostCatalogVariantUpdateJobResponse_data_attributes_status
     {
         [EnumMember(Value = "cancelled")]

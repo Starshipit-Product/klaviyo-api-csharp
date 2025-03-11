@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>Aggregation interval, e.g. &quot;hour&quot;, &quot;day&quot;, &quot;week&quot;, &quot;month&quot;</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum MetricAggregateQueryResourceObject_attributes_interval
     {
         [EnumMember(Value = "day")]

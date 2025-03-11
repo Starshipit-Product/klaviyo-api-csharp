@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class DropShadowBlock : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -19,10 +19,10 @@ namespace Klaviyo.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Data { get; set; }
+        public global::Klaviyo.Models.DropShadowBlockData? Data { get; set; }
 #nullable restore
 #else
-        public string Data { get; set; }
+        public global::Klaviyo.Models.DropShadowBlockData Data { get; set; }
 #endif
         /// <summary>The type property</summary>
         public global::Klaviyo.Models.Drop_shadowEnum? Type { get; set; }
@@ -52,7 +52,7 @@ namespace Klaviyo.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "content_type", n => { ContentType = n.GetEnumValue<global::Klaviyo.Models.BlockEnum>(); } },
-                { "data", n => { Data = n.GetStringValue(); } },
+                { "data", n => { Data = n.GetObjectValue<global::Klaviyo.Models.DropShadowBlockData>(global::Klaviyo.Models.DropShadowBlockData.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Klaviyo.Models.Drop_shadowEnum>(); } },
             };
         }
@@ -64,7 +64,7 @@ namespace Klaviyo.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Klaviyo.Models.BlockEnum>("content_type", ContentType);
-            writer.WriteStringValue("data", Data);
+            writer.WriteObjectValue<global::Klaviyo.Models.DropShadowBlockData>("data", Data);
             writer.WriteEnumValue<global::Klaviyo.Models.Drop_shadowEnum>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

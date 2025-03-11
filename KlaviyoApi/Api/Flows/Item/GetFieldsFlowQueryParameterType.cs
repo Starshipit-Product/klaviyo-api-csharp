@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Klaviyo.Api.Flows.Item
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public enum GetFieldsFlowQueryParameterType
     #pragma warning restore CS1591
@@ -31,6 +31,30 @@ namespace Klaviyo.Api.Flows.Item
         [EnumMember(Value = "trigger_type")]
         #pragma warning disable CS1591
         Trigger_type,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition")]
+        #pragma warning disable CS1591
+        Definition,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.triggers")]
+        #pragma warning disable CS1591
+        DefinitionTriggers,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.profile_filter")]
+        #pragma warning disable CS1591
+        DefinitionProfile_filter,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.profile_filter.condition_groups")]
+        #pragma warning disable CS1591
+        DefinitionProfile_filterCondition_groups,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.actions")]
+        #pragma warning disable CS1591
+        DefinitionActions,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.entry_action_id")]
+        #pragma warning disable CS1591
+        DefinitionEntry_action_id,
         #pragma warning restore CS1591
     }
 }

@@ -10,7 +10,7 @@ namespace Klaviyo.Models
     /// <summary>
     /// Flat JSON blob to provide custom metadata about the catalog item variant. May not exceed 100kb.
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CatalogVariantResponseObjectResource_attributes_custom_metadata : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

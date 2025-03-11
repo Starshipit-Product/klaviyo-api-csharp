@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Klaviyo.Api.Reviews
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public enum GetFieldsReviewQueryParameterType
     #pragma warning restore CS1591
@@ -15,6 +15,22 @@ namespace Klaviyo.Api.Reviews
         [EnumMember(Value = "status")]
         #pragma warning disable CS1591
         Status,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "status.value")]
+        #pragma warning disable CS1591
+        StatusValue,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "status.rejection_reason")]
+        #pragma warning disable CS1591
+        StatusRejection_reason,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "status.rejection_reason.reason")]
+        #pragma warning disable CS1591
+        StatusRejection_reasonReason,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "status.rejection_reason.status_explanation")]
+        #pragma warning disable CS1591
+        StatusRejection_reasonStatus_explanation,
         #pragma warning restore CS1591
         [EnumMember(Value = "verified")]
         #pragma warning disable CS1591

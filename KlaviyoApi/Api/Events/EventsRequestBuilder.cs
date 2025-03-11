@@ -15,7 +15,7 @@ namespace Klaviyo.Api.Events
     /// <summary>
     /// Builds and executes requests for operations under \api\events
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EventsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Klaviyo.api.events.item collection</summary>
@@ -150,10 +150,10 @@ namespace Klaviyo.Api.Events
         /// <summary>
         /// Get all events in an accountRequests can be sorted by the following fields:`datetime`, `timestamp`Returns a maximum of 200 events per page.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `350/s`&lt;br&gt;Steady: `3500/m`**Scopes:**`events:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EventsRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldseventAsGetFieldsEventQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -164,7 +164,7 @@ namespace Klaviyo.Api.Events
             [QueryParameter("fields%5Bevent%5D")]
             public string[] Fieldsevent { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bevent%5D")]
@@ -174,7 +174,7 @@ namespace Klaviyo.Api.Events
             [QueryParameter("fields%5Bevent%5D")]
             public global::Klaviyo.Api.Events.GetFieldsEventQueryParameterType[] FieldseventAsGetFieldsEventQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsmetricAsGetFieldsMetricQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -185,7 +185,7 @@ namespace Klaviyo.Api.Events
             [QueryParameter("fields%5Bmetric%5D")]
             public string[] Fieldsmetric { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bmetric%5D")]
@@ -195,7 +195,7 @@ namespace Klaviyo.Api.Events
             [QueryParameter("fields%5Bmetric%5D")]
             public global::Klaviyo.Api.Events.GetFieldsMetricQueryParameterType[] FieldsmetricAsGetFieldsMetricQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsprofileAsGetFieldsProfileQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -206,7 +206,7 @@ namespace Klaviyo.Api.Events
             [QueryParameter("fields%5Bprofile%5D")]
             public string[] Fieldsprofile { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bprofile%5D")]
@@ -216,7 +216,7 @@ namespace Klaviyo.Api.Events
             [QueryParameter("fields%5Bprofile%5D")]
             public global::Klaviyo.Api.Events.GetFieldsProfileQueryParameterType[] FieldsprofileAsGetFieldsProfileQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`metric_id`: `equals`&lt;br&gt;`profile_id`: `equals`&lt;br&gt;`profile`: `has`&lt;br&gt;`datetime`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`timestamp`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`metric_id`: `equals`&lt;br&gt;`profile_id`: `equals`&lt;br&gt;`profile`: `has`&lt;br&gt;`datetime`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`timestamp`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -226,7 +226,7 @@ namespace Klaviyo.Api.Events
             [QueryParameter("filter")]
             public string Filter { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
             [Obsolete("This property is deprecated, use IncludeAsGetIncludeQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -237,7 +237,7 @@ namespace Klaviyo.Api.Events
             [QueryParameter("include")]
             public string[] Include { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include")]
@@ -247,7 +247,7 @@ namespace Klaviyo.Api.Events
             [QueryParameter("include")]
             public global::Klaviyo.Api.Events.GetIncludeQueryParameterType[] IncludeAsGetIncludeQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#pagination</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#pagination</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page%5Bcursor%5D")]
@@ -257,7 +257,7 @@ namespace Klaviyo.Api.Events
             [QueryParameter("page%5Bcursor%5D")]
             public string Pagecursor { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -268,7 +268,7 @@ namespace Klaviyo.Api.Events
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [QueryParameter("sort")]
             public global::Klaviyo.Api.Events.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
         }
@@ -276,7 +276,7 @@ namespace Klaviyo.Api.Events
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EventsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.Events.EventsRequestBuilder.EventsRequestBuilderGetQueryParameters>
         {
         }
@@ -284,7 +284,7 @@ namespace Klaviyo.Api.Events
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EventsRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
         {
         }

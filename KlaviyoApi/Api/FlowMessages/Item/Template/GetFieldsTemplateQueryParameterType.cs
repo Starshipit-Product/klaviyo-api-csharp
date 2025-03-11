@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Klaviyo.Api.FlowMessages.Item.Template
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public enum GetFieldsTemplateQueryParameterType
     #pragma warning restore CS1591
@@ -23,6 +23,10 @@ namespace Klaviyo.Api.FlowMessages.Item.Template
         [EnumMember(Value = "text")]
         #pragma warning disable CS1591
         Text,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "amp")]
+        #pragma warning disable CS1591
+        Amp,
         #pragma warning restore CS1591
         [EnumMember(Value = "created")]
         #pragma warning disable CS1591

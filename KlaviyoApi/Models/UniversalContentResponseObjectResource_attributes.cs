@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class UniversalContentResponseObjectResource_attributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -95,7 +95,7 @@ namespace Klaviyo.Models
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.ButtonBlock"/>, <see cref="global::Klaviyo.Models.DropShadowBlock"/>, <see cref="global::Klaviyo.Models.HeaderBlock"/>, <see cref="global::Klaviyo.Models.HorizontalRuleBlock"/>, <see cref="global::Klaviyo.Models.HTMLBlock"/>, <see cref="global::Klaviyo.Models.ImageBlock"/>, <see cref="global::Klaviyo.Models.ProductBlock"/>, <see cref="global::Klaviyo.Models.ReviewBlock"/>, <see cref="global::Klaviyo.Models.Section"/>, <see cref="global::Klaviyo.Models.SocialBlock"/>, <see cref="global::Klaviyo.Models.SpacerBlock"/>, <see cref="global::Klaviyo.Models.SplitBlock"/>, <see cref="global::Klaviyo.Models.TableBlock"/>, <see cref="global::Klaviyo.Models.TextBlock"/>, <see cref="global::Klaviyo.Models.UnsupportedBlock"/>, <see cref="global::Klaviyo.Models.VideoBlock"/>
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class UniversalContentResponseObjectResource_attributes_definition : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ButtonBlock"/></summary>

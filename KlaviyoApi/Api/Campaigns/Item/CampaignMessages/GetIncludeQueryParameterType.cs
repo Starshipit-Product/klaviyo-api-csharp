@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public enum GetIncludeQueryParameterType
     #pragma warning restore CS1591
@@ -11,6 +11,10 @@ namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
         [EnumMember(Value = "campaign")]
         #pragma warning disable CS1591
         Campaign,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "image")]
+        #pragma warning disable CS1591
+        Image,
         #pragma warning restore CS1591
         [EnumMember(Value = "template")]
         #pragma warning disable CS1591

@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class NoEmailMarketingUnsubscribed : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -67,7 +67,7 @@ namespace Klaviyo.Models
         /// <summary>
         /// Composed type wrapper for classes List&lt;global::Klaviyo.Models.ConstantContactIntegrationMethodFilter&gt;, List&lt;global::Klaviyo.Models.InvalidEmailDateFilter&gt;
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class NoEmailMarketingUnsubscribed_filters : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type List&lt;global::Klaviyo.Models.ConstantContactIntegrationMethodFilter&gt;</summary>

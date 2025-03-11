@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class CampaignMessageCreateQueryResourceObject : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -21,6 +21,14 @@ namespace Klaviyo.Models
 #nullable restore
 #else
         public global::Klaviyo.Models.CampaignMessageCreateQueryResourceObject_attributes Attributes { get; set; }
+#endif
+        /// <summary>The relationships property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Klaviyo.Models.CampaignMessageCreateQueryResourceObject_relationships? Relationships { get; set; }
+#nullable restore
+#else
+        public global::Klaviyo.Models.CampaignMessageCreateQueryResourceObject_relationships Relationships { get; set; }
 #endif
         /// <summary>The type property</summary>
         public global::Klaviyo.Models.CampaignMessageEnum? Type { get; set; }
@@ -50,6 +58,7 @@ namespace Klaviyo.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "attributes", n => { Attributes = n.GetObjectValue<global::Klaviyo.Models.CampaignMessageCreateQueryResourceObject_attributes>(global::Klaviyo.Models.CampaignMessageCreateQueryResourceObject_attributes.CreateFromDiscriminatorValue); } },
+                { "relationships", n => { Relationships = n.GetObjectValue<global::Klaviyo.Models.CampaignMessageCreateQueryResourceObject_relationships>(global::Klaviyo.Models.CampaignMessageCreateQueryResourceObject_relationships.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Klaviyo.Models.CampaignMessageEnum>(); } },
             };
         }
@@ -61,6 +70,7 @@ namespace Klaviyo.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Klaviyo.Models.CampaignMessageCreateQueryResourceObject_attributes>("attributes", Attributes);
+            writer.WriteObjectValue<global::Klaviyo.Models.CampaignMessageCreateQueryResourceObject_relationships>("relationships", Relationships);
             writer.WriteEnumValue<global::Klaviyo.Models.CampaignMessageEnum>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

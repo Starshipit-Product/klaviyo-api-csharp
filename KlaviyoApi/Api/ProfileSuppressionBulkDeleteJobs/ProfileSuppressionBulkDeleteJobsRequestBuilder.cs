@@ -15,7 +15,7 @@ namespace Klaviyo.Api.ProfileSuppressionBulkDeleteJobs
     /// <summary>
     /// Builds and executes requests for operations under \api\profile-suppression-bulk-delete-jobs
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProfileSuppressionBulkDeleteJobsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Klaviyo.api.profileSuppressionBulkDeleteJobs.item collection</summary>
@@ -151,10 +151,10 @@ namespace Klaviyo.Api.ProfileSuppressionBulkDeleteJobs
         /// <summary>
         /// Get all bulk unsuppress profiles jobs.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`**Scopes:**`subscriptions:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProfileSuppressionBulkDeleteJobsRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsprofileSuppressionBulkDeleteJobAsGetFieldsProfileSuppressionBulkDeleteJobQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -165,7 +165,7 @@ namespace Klaviyo.Api.ProfileSuppressionBulkDeleteJobs
             [QueryParameter("fields%5Bprofile%2Dsuppression%2Dbulk%2Ddelete%2Djob%5D")]
             public string[] FieldsprofileSuppressionBulkDeleteJob { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bprofile%2Dsuppression%2Dbulk%2Ddelete%2Djob%5D")]
@@ -175,7 +175,7 @@ namespace Klaviyo.Api.ProfileSuppressionBulkDeleteJobs
             [QueryParameter("fields%5Bprofile%2Dsuppression%2Dbulk%2Ddelete%2Djob%5D")]
             public global::Klaviyo.Api.ProfileSuppressionBulkDeleteJobs.GetFieldsProfileSuppressionBulkDeleteJobQueryParameterType[] FieldsprofileSuppressionBulkDeleteJobAsGetFieldsProfileSuppressionBulkDeleteJobQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`status`: `equals`&lt;br&gt;`list_id`: `equals`&lt;br&gt;`segment_id`: `equals`</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`status`: `equals`&lt;br&gt;`list_id`: `equals`&lt;br&gt;`segment_id`: `equals`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -185,7 +185,7 @@ namespace Klaviyo.Api.ProfileSuppressionBulkDeleteJobs
             [QueryParameter("filter")]
             public string Filter { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#pagination</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#pagination</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page%5Bcursor%5D")]
@@ -195,7 +195,7 @@ namespace Klaviyo.Api.ProfileSuppressionBulkDeleteJobs
             [QueryParameter("page%5Bcursor%5D")]
             public string Pagecursor { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -206,7 +206,7 @@ namespace Klaviyo.Api.ProfileSuppressionBulkDeleteJobs
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [QueryParameter("sort")]
             public global::Klaviyo.Api.ProfileSuppressionBulkDeleteJobs.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
         }
@@ -214,7 +214,7 @@ namespace Klaviyo.Api.ProfileSuppressionBulkDeleteJobs
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProfileSuppressionBulkDeleteJobsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.ProfileSuppressionBulkDeleteJobs.ProfileSuppressionBulkDeleteJobsRequestBuilder.ProfileSuppressionBulkDeleteJobsRequestBuilderGetQueryParameters>
         {
         }
@@ -222,7 +222,7 @@ namespace Klaviyo.Api.ProfileSuppressionBulkDeleteJobs
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProfileSuppressionBulkDeleteJobsRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
         {
         }

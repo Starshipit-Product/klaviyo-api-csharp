@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class GetFlowActionResponseCompoundDocument : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -17,10 +17,10 @@ namespace Klaviyo.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Klaviyo.Models.FlowActionResponseObjectResource? Data { get; set; }
+        public global::Klaviyo.Models.GetFlowActionResponseCompoundDocument_data? Data { get; set; }
 #nullable restore
 #else
-        public global::Klaviyo.Models.FlowActionResponseObjectResource Data { get; set; }
+        public global::Klaviyo.Models.GetFlowActionResponseCompoundDocument_data Data { get; set; }
 #endif
         /// <summary>The included property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Klaviyo.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Klaviyo.Models.FlowActionResponseObjectResource>(global::Klaviyo.Models.FlowActionResponseObjectResource.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Klaviyo.Models.GetFlowActionResponseCompoundDocument_data>(global::Klaviyo.Models.GetFlowActionResponseCompoundDocument_data.CreateFromDiscriminatorValue); } },
                 { "included", n => { Included = n.GetCollectionOfObjectValues<global::Klaviyo.Models.GetFlowActionResponseCompoundDocument.GetFlowActionResponseCompoundDocument_included>(global::Klaviyo.Models.GetFlowActionResponseCompoundDocument.GetFlowActionResponseCompoundDocument_included.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,14 +66,14 @@ namespace Klaviyo.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Klaviyo.Models.FlowActionResponseObjectResource>("data", Data);
+            writer.WriteObjectValue<global::Klaviyo.Models.GetFlowActionResponseCompoundDocument_data>("data", Data);
             writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.GetFlowActionResponseCompoundDocument.GetFlowActionResponseCompoundDocument_included>("included", Included);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.FlowMessageResponseObjectResource"/>, <see cref="global::Klaviyo.Models.FlowResponseObjectResource"/>
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class GetFlowActionResponseCompoundDocument_included : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.FlowMessageResponseObjectResource"/></summary>

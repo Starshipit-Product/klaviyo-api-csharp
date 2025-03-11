@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class CustomTrackingParamDTO : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -83,7 +83,7 @@ namespace Klaviyo.Models
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.CampaignTrackingSettingDynamicParam"/>, <see cref="global::Klaviyo.Models.CampaignTrackingSettingStaticParam"/>
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CustomTrackingParamDTO_campaign : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.CampaignTrackingSettingDynamicParam"/></summary>
@@ -158,7 +158,7 @@ namespace Klaviyo.Models
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.FlowTrackingSettingDynamicParam"/>, <see cref="global::Klaviyo.Models.FlowTrackingSettingStaticParam"/>
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CustomTrackingParamDTO_flow : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.FlowTrackingSettingDynamicParam"/></summary>

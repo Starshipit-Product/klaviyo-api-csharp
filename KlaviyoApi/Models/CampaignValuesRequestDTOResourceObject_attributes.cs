@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class CampaignValuesRequestDTOResourceObject_attributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -22,7 +22,7 @@ namespace Klaviyo.Models
 #else
         public string ConversionMetricId { get; set; }
 #endif
-        /// <summary>API filter string used to filter the query.Allowed filters are send_channel, campaign_id.Allowed operators are equals, contains-any.Only one filter can be used per attribute, only AND can be used as a combination operator.Max of 100 messages per ANY filter.When filtering on send_channel, allowed values are email, push-notification, sms.</summary>
+        /// <summary>API filter string used to filter the query.Allowed filters are send_channel, campaign_id.Allowed operators are equals, contains-any.Only one filter can be used per attribute, only AND can be used as a combination operator.Max of 100 messages per ANY filter.When filtering on send_channel, allowed values are email, sms, push-notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Filter { get; set; }
@@ -93,7 +93,7 @@ namespace Klaviyo.Models
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.CustomTimeframe"/>, <see cref="global::Klaviyo.Models.Timeframe"/>
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CampaignValuesRequestDTOResourceObject_attributes_timeframe : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.CustomTimeframe"/></summary>

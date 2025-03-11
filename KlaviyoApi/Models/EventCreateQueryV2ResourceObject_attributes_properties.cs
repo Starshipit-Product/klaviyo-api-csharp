@@ -10,7 +10,7 @@ namespace Klaviyo.Models
     /// <summary>
     /// Properties of this event. Any top level property (that are not objects) can beused to create segments. The $extra property is a special property. This records anynon-segmentable values that can be referenced later. For example, HTML templates areuseful on a segment but are not used to create a segment. There are limitsplaced onto the size of the data present. This must not exceed 5 MB. This must notexceed 300 event properties. A single string cannot be larger than 100 KB. Each arraymust not exceed 4000 elements. The properties cannot contain more than 10 nested levels.
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EventCreateQueryV2ResourceObject_attributes_properties : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

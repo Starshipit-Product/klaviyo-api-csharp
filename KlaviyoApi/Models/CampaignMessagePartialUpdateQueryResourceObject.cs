@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class CampaignMessagePartialUpdateQueryResourceObject : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -29,6 +29,14 @@ namespace Klaviyo.Models
 #nullable restore
 #else
         public string Id { get; set; }
+#endif
+        /// <summary>The relationships property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Klaviyo.Models.CampaignMessagePartialUpdateQueryResourceObject_relationships? Relationships { get; set; }
+#nullable restore
+#else
+        public global::Klaviyo.Models.CampaignMessagePartialUpdateQueryResourceObject_relationships Relationships { get; set; }
 #endif
         /// <summary>The type property</summary>
         public global::Klaviyo.Models.CampaignMessageEnum? Type { get; set; }
@@ -59,6 +67,7 @@ namespace Klaviyo.Models
             {
                 { "attributes", n => { Attributes = n.GetObjectValue<global::Klaviyo.Models.CampaignMessagePartialUpdateQueryResourceObject_attributes>(global::Klaviyo.Models.CampaignMessagePartialUpdateQueryResourceObject_attributes.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "relationships", n => { Relationships = n.GetObjectValue<global::Klaviyo.Models.CampaignMessagePartialUpdateQueryResourceObject_relationships>(global::Klaviyo.Models.CampaignMessagePartialUpdateQueryResourceObject_relationships.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Klaviyo.Models.CampaignMessageEnum>(); } },
             };
         }
@@ -71,6 +80,7 @@ namespace Klaviyo.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Klaviyo.Models.CampaignMessagePartialUpdateQueryResourceObject_attributes>("attributes", Attributes);
             writer.WriteStringValue("id", Id);
+            writer.WriteObjectValue<global::Klaviyo.Models.CampaignMessagePartialUpdateQueryResourceObject_relationships>("relationships", Relationships);
             writer.WriteEnumValue<global::Klaviyo.Models.CampaignMessageEnum>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

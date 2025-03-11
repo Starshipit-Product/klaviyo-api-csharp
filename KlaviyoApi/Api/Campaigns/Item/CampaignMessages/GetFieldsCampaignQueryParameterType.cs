@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public enum GetFieldsCampaignQueryParameterType
     #pragma warning restore CS1591
@@ -68,41 +68,29 @@ namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
         #pragma warning disable CS1591
         Send_strategyMethod,
         #pragma warning restore CS1591
-        [EnumMember(Value = "send_strategy.options_static")]
+        [EnumMember(Value = "send_strategy.datetime")]
         #pragma warning disable CS1591
-        Send_strategyOptions_static,
+        Send_strategyDatetime,
         #pragma warning restore CS1591
-        [EnumMember(Value = "send_strategy.options_static.datetime")]
+        [EnumMember(Value = "send_strategy.options")]
         #pragma warning disable CS1591
-        Send_strategyOptions_staticDatetime,
+        Send_strategyOptions,
         #pragma warning restore CS1591
-        [EnumMember(Value = "send_strategy.options_static.is_local")]
+        [EnumMember(Value = "send_strategy.options.is_local")]
         #pragma warning disable CS1591
-        Send_strategyOptions_staticIs_local,
+        Send_strategyOptionsIs_local,
         #pragma warning restore CS1591
-        [EnumMember(Value = "send_strategy.options_static.send_past_recipients_immediately")]
+        [EnumMember(Value = "send_strategy.options.send_past_recipients_immediately")]
         #pragma warning disable CS1591
-        Send_strategyOptions_staticSend_past_recipients_immediately,
+        Send_strategyOptionsSend_past_recipients_immediately,
         #pragma warning restore CS1591
-        [EnumMember(Value = "send_strategy.options_throttled")]
+        [EnumMember(Value = "send_strategy.throttle_percentage")]
         #pragma warning disable CS1591
-        Send_strategyOptions_throttled,
+        Send_strategyThrottle_percentage,
         #pragma warning restore CS1591
-        [EnumMember(Value = "send_strategy.options_throttled.datetime")]
+        [EnumMember(Value = "send_strategy.date")]
         #pragma warning disable CS1591
-        Send_strategyOptions_throttledDatetime,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "send_strategy.options_throttled.throttle_percentage")]
-        #pragma warning disable CS1591
-        Send_strategyOptions_throttledThrottle_percentage,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "send_strategy.options_sto")]
-        #pragma warning disable CS1591
-        Send_strategyOptions_sto,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "send_strategy.options_sto.date")]
-        #pragma warning disable CS1591
-        Send_strategyOptions_stoDate,
+        Send_strategyDate,
         #pragma warning restore CS1591
         [EnumMember(Value = "created_at")]
         #pragma warning disable CS1591

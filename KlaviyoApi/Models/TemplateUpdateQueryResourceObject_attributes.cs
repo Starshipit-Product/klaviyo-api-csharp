@@ -7,13 +7,21 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class TemplateUpdateQueryResourceObject_attributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The AMP version of the template. Requires AMP Email to be enabled to access in-app. Refer to the AMP Email setup guide at https://developers.klaviyo.com/en/docs/send_amp_emails_in_klaviyo</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Amp { get; set; }
+#nullable restore
+#else
+        public string Amp { get; set; }
+#endif
         /// <summary>The HTML of the template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,6 +71,7 @@ namespace Klaviyo.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "amp", n => { Amp = n.GetStringValue(); } },
                 { "html", n => { Html = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
@@ -75,6 +84,7 @@ namespace Klaviyo.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("amp", Amp);
             writer.WriteStringValue("html", Html);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("text", Text);

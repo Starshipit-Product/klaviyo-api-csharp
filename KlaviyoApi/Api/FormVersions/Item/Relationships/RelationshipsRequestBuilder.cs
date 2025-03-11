@@ -12,7 +12,7 @@ namespace Klaviyo.Api.FormVersions.Item.Relationships
     /// <summary>
     /// Builds and executes requests for operations under \api\form-versions\{id}\relationships
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RelationshipsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The form property</summary>

@@ -17,7 +17,7 @@ namespace Klaviyo.Api.FlowActions.Item
     /// <summary>
     /// Builds and executes requests for operations under \api\flow-actions\{id}
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FlowActionsItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The flow property</summary>
@@ -107,10 +107,10 @@ namespace Klaviyo.Api.FlowActions.Item
         /// <summary>
         /// Get a flow action from a flow with the given flow action ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`flows:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FlowActionsItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsflowAsGetFieldsFlowQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -121,7 +121,7 @@ namespace Klaviyo.Api.FlowActions.Item
             [QueryParameter("fields%5Bflow%5D")]
             public string[] Fieldsflow { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsflowActionAsGetFieldsFlowActionQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -132,7 +132,7 @@ namespace Klaviyo.Api.FlowActions.Item
             [QueryParameter("fields%5Bflow%2Daction%5D")]
             public string[] FieldsflowAction { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bflow%2Daction%5D")]
@@ -142,7 +142,7 @@ namespace Klaviyo.Api.FlowActions.Item
             [QueryParameter("fields%5Bflow%2Daction%5D")]
             public global::Klaviyo.Api.FlowActions.Item.GetFieldsFlowActionQueryParameterType[] FieldsflowActionAsGetFieldsFlowActionQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bflow%5D")]
@@ -152,7 +152,7 @@ namespace Klaviyo.Api.FlowActions.Item
             [QueryParameter("fields%5Bflow%5D")]
             public global::Klaviyo.Api.FlowActions.Item.GetFieldsFlowQueryParameterType[] FieldsflowAsGetFieldsFlowQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsflowMessageAsGetFieldsFlowMessageQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -163,7 +163,7 @@ namespace Klaviyo.Api.FlowActions.Item
             [QueryParameter("fields%5Bflow%2Dmessage%5D")]
             public string[] FieldsflowMessage { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bflow%2Dmessage%5D")]
@@ -173,7 +173,7 @@ namespace Klaviyo.Api.FlowActions.Item
             [QueryParameter("fields%5Bflow%2Dmessage%5D")]
             public global::Klaviyo.Api.FlowActions.Item.GetFieldsFlowMessageQueryParameterType[] FieldsflowMessageAsGetFieldsFlowMessageQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
             [Obsolete("This property is deprecated, use IncludeAsGetIncludeQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -184,7 +184,7 @@ namespace Klaviyo.Api.FlowActions.Item
             [QueryParameter("include")]
             public string[] Include { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include")]
@@ -199,7 +199,7 @@ namespace Klaviyo.Api.FlowActions.Item
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FlowActionsItemRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.FlowActions.Item.FlowActionsItemRequestBuilder.FlowActionsItemRequestBuilderGetQueryParameters>
         {
         }

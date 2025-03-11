@@ -14,7 +14,7 @@ namespace Klaviyo.Api.TemplateRender
     /// <summary>
     /// Builds and executes requests for operations under \api\template-render
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TemplateRenderRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
@@ -34,7 +34,7 @@ namespace Klaviyo.Api.TemplateRender
         {
         }
         /// <summary>
-        /// Render a template with the given template ID and context attribute. Returns the HTML and plain text versions of the email template.**Request body parameters** (nested under `attributes`):* `return_fields`: Request specific fields using [sparse fieldsets](https://developers.klaviyo.com/en/reference/api_overview#sparse-fieldsets).* `context`: This is the context your email template will be rendered with. You must pass in a `context` object as a JSON object.Email templates are rendered with contexts in a similar manner to Django templates. Nested template variables can be referenced via dot notation. Template variables without corresponding `context` values are treated as `FALSE` and output nothing.Ex. `{ &quot;name&quot; : &quot;George Washington&quot;, &quot;state&quot; : &quot;VA&quot; }`&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`templates:read`
+        /// Render a template with the given template ID and context attribute. Returns the AMP, HTML, and plain text versions of the email template.**Request body parameters** (nested under `attributes`):* `return_fields`: Request specific fields using [sparse fieldsets](https://developers.klaviyo.com/en/reference/api_overview#sparse-fieldsets).* `context`: This is the context your email template will be rendered with. You must pass in a `context` object as a JSON object.Email templates are rendered with contexts in a similar manner to Django templates. Nested template variables can be referenced via dot notation. Template variables without corresponding `context` values are treated as `FALSE` and output nothing.Ex. `{ &quot;name&quot; : &quot;George Washington&quot;, &quot;state&quot; : &quot;VA&quot; }`&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`templates:read`
         /// </summary>
         /// <returns>A <see cref="global::Klaviyo.Models.PostTemplateResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -61,7 +61,7 @@ namespace Klaviyo.Api.TemplateRender
             return await RequestAdapter.SendAsync<global::Klaviyo.Models.PostTemplateResponse>(requestInfo, global::Klaviyo.Models.PostTemplateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Render a template with the given template ID and context attribute. Returns the HTML and plain text versions of the email template.**Request body parameters** (nested under `attributes`):* `return_fields`: Request specific fields using [sparse fieldsets](https://developers.klaviyo.com/en/reference/api_overview#sparse-fieldsets).* `context`: This is the context your email template will be rendered with. You must pass in a `context` object as a JSON object.Email templates are rendered with contexts in a similar manner to Django templates. Nested template variables can be referenced via dot notation. Template variables without corresponding `context` values are treated as `FALSE` and output nothing.Ex. `{ &quot;name&quot; : &quot;George Washington&quot;, &quot;state&quot; : &quot;VA&quot; }`&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`templates:read`
+        /// Render a template with the given template ID and context attribute. Returns the AMP, HTML, and plain text versions of the email template.**Request body parameters** (nested under `attributes`):* `return_fields`: Request specific fields using [sparse fieldsets](https://developers.klaviyo.com/en/reference/api_overview#sparse-fieldsets).* `context`: This is the context your email template will be rendered with. You must pass in a `context` object as a JSON object.Email templates are rendered with contexts in a similar manner to Django templates. Nested template variables can be referenced via dot notation. Template variables without corresponding `context` values are treated as `FALSE` and output nothing.Ex. `{ &quot;name&quot; : &quot;George Washington&quot;, &quot;state&quot; : &quot;VA&quot; }`&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`templates:read`
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -95,7 +95,7 @@ namespace Klaviyo.Api.TemplateRender
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TemplateRenderRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
         {
         }

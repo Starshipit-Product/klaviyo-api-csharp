@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>Operators for static date filters.E.g. &quot;before 2023-01-01&quot;</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum StaticDateFilter_operator
     {
         [EnumMember(Value = "after")]

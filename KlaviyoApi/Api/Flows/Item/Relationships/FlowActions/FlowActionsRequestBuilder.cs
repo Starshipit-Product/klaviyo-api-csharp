@@ -14,7 +14,7 @@ namespace Klaviyo.Api.Flows.Item.Relationships.FlowActions
     /// <summary>
     /// Builds and executes requests for operations under \api\flows\{id}\relationships\flow-actions
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FlowActionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
@@ -22,7 +22,7 @@ namespace Klaviyo.Api.Flows.Item.Relationships.FlowActions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FlowActionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/flows/{id}/relationships/flow-actions{?filter*,page%5Bsize%5D*,sort*}", pathParameters)
+        public FlowActionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/flows/{id}/relationships/flow-actions{?filter*,page%5Bcursor%5D*,page%5Bsize%5D*,sort*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,11 +30,11 @@ namespace Klaviyo.Api.Flows.Item.Relationships.FlowActions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FlowActionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/flows/{id}/relationships/flow-actions{?filter*,page%5Bsize%5D*,sort*}", rawUrl)
+        public FlowActionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/flows/{id}/relationships/flow-actions{?filter*,page%5Bcursor%5D*,page%5Bsize%5D*,sort*}", rawUrl)
         {
         }
         /// <summary>
-        /// Get all [relationships](https://developers.klaviyo.com/en/reference/api_overview#relationships) for flow actions associated with the given flow ID.Flow action relationships can be sorted by the following fields, in ascending and descending order:`id`,  `status`, `created`, `updated`Use filters to narrow your results.Returns a maximum of 50 flow action relationships per request, which can be paginated with offset pagination. Offset pagination uses the following parameters: `page[size]` and `page[number]`.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`flows:read`
+        /// Get all [relationships](https://developers.klaviyo.com/en/reference/api_overview#relationships) for flow actions associated with the given flow ID.Returns a maximum of 100 flows per request, which can be paginated with cursor-based pagination.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`flows:read`
         /// </summary>
         /// <returns>A <see cref="global::Klaviyo.Models.GetFlowFlowActionRelationshipListResponseCollection"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -59,7 +59,7 @@ namespace Klaviyo.Api.Flows.Item.Relationships.FlowActions
             return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetFlowFlowActionRelationshipListResponseCollection>(requestInfo, global::Klaviyo.Models.GetFlowFlowActionRelationshipListResponseCollection.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get all [relationships](https://developers.klaviyo.com/en/reference/api_overview#relationships) for flow actions associated with the given flow ID.Flow action relationships can be sorted by the following fields, in ascending and descending order:`id`,  `status`, `created`, `updated`Use filters to narrow your results.Returns a maximum of 50 flow action relationships per request, which can be paginated with offset pagination. Offset pagination uses the following parameters: `page[size]` and `page[number]`.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`flows:read`
+        /// Get all [relationships](https://developers.klaviyo.com/en/reference/api_overview#relationships) for flow actions associated with the given flow ID.Returns a maximum of 100 flows per request, which can be paginated with cursor-based pagination.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`flows:read`
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -87,12 +87,12 @@ namespace Klaviyo.Api.Flows.Item.Relationships.FlowActions
             return new global::Klaviyo.Api.Flows.Item.Relationships.FlowActions.FlowActionsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get all [relationships](https://developers.klaviyo.com/en/reference/api_overview#relationships) for flow actions associated with the given flow ID.Flow action relationships can be sorted by the following fields, in ascending and descending order:`id`,  `status`, `created`, `updated`Use filters to narrow your results.Returns a maximum of 50 flow action relationships per request, which can be paginated with offset pagination. Offset pagination uses the following parameters: `page[size]` and `page[number]`.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`flows:read`
+        /// Get all [relationships](https://developers.klaviyo.com/en/reference/api_overview#relationships) for flow actions associated with the given flow ID.Returns a maximum of 100 flows per request, which can be paginated with cursor-based pagination.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`flows:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FlowActionsRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`action_type`: `equals`&lt;br&gt;`status`: `equals`&lt;br&gt;`created`: `equals`, `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`updated`: `equals`, `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`id`: `any`&lt;br&gt;`action_type`: `any`, `equals`&lt;br&gt;`status`: `equals`&lt;br&gt;`created`: `equals`, `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`updated`: `equals`, `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -102,10 +102,20 @@ namespace Klaviyo.Api.Flows.Item.Relationships.FlowActions
             [QueryParameter("filter")]
             public string Filter { get; set; }
 #endif
-            /// <summary>Default: 50. Min: 1. Max: 100.</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#pagination</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("page%5Bcursor%5D")]
+            public string? Pagecursor { get; set; }
+#nullable restore
+#else
+            [QueryParameter("page%5Bcursor%5D")]
+            public string Pagecursor { get; set; }
+#endif
+            /// <summary>Default: 50. Min: 1. Max: 50.</summary>
             [QueryParameter("page%5Bsize%5D")]
             public int? Pagesize { get; set; }
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -116,7 +126,7 @@ namespace Klaviyo.Api.Flows.Item.Relationships.FlowActions
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [QueryParameter("sort")]
             public global::Klaviyo.Api.Flows.Item.Relationships.FlowActions.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
         }
@@ -124,7 +134,7 @@ namespace Klaviyo.Api.Flows.Item.Relationships.FlowActions
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FlowActionsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.Flows.Item.Relationships.FlowActions.FlowActionsRequestBuilder.FlowActionsRequestBuilderGetQueryParameters>
         {
         }

@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>This is the enablement status for the individual push token.</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PushTokenCreateQueryResourceObject_attributes_enablement_status
     {
         [EnumMember(Value = "AUTHORIZED")]

@@ -3,82 +3,150 @@ using System.Runtime.Serialization;
 using System;
 namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public enum GetFieldsCampaignMessageQueryParameterType
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "label")]
+        [EnumMember(Value = "definition")]
         #pragma warning disable CS1591
-        Label,
+        Definition,
         #pragma warning restore CS1591
-        [EnumMember(Value = "channel")]
+        [EnumMember(Value = "definition.channel")]
         #pragma warning disable CS1591
-        Channel,
+        DefinitionChannel,
         #pragma warning restore CS1591
-        [EnumMember(Value = "content")]
+        [EnumMember(Value = "definition.label")]
         #pragma warning disable CS1591
-        Content,
+        DefinitionLabel,
         #pragma warning restore CS1591
-        [EnumMember(Value = "content.subject")]
+        [EnumMember(Value = "definition.content")]
         #pragma warning disable CS1591
-        ContentSubject,
+        DefinitionContent,
         #pragma warning restore CS1591
-        [EnumMember(Value = "content.preview_text")]
+        [EnumMember(Value = "definition.content.subject")]
         #pragma warning disable CS1591
-        ContentPreview_text,
+        DefinitionContentSubject,
         #pragma warning restore CS1591
-        [EnumMember(Value = "content.from_email")]
+        [EnumMember(Value = "definition.content.preview_text")]
         #pragma warning disable CS1591
-        ContentFrom_email,
+        DefinitionContentPreview_text,
         #pragma warning restore CS1591
-        [EnumMember(Value = "content.from_label")]
+        [EnumMember(Value = "definition.content.from_email")]
         #pragma warning disable CS1591
-        ContentFrom_label,
+        DefinitionContentFrom_email,
         #pragma warning restore CS1591
-        [EnumMember(Value = "content.reply_to_email")]
+        [EnumMember(Value = "definition.content.from_label")]
         #pragma warning disable CS1591
-        ContentReply_to_email,
+        DefinitionContentFrom_label,
         #pragma warning restore CS1591
-        [EnumMember(Value = "content.cc_email")]
+        [EnumMember(Value = "definition.content.reply_to_email")]
         #pragma warning disable CS1591
-        ContentCc_email,
+        DefinitionContentReply_to_email,
         #pragma warning restore CS1591
-        [EnumMember(Value = "content.bcc_email")]
+        [EnumMember(Value = "definition.content.cc_email")]
         #pragma warning disable CS1591
-        ContentBcc_email,
+        DefinitionContentCc_email,
         #pragma warning restore CS1591
-        [EnumMember(Value = "content.body")]
+        [EnumMember(Value = "definition.content.bcc_email")]
         #pragma warning disable CS1591
-        ContentBody,
+        DefinitionContentBcc_email,
         #pragma warning restore CS1591
-        [EnumMember(Value = "content.media_url")]
+        [EnumMember(Value = "definition.content.body")]
         #pragma warning disable CS1591
-        ContentMedia_url,
+        DefinitionContentBody,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.content.media_url")]
+        #pragma warning disable CS1591
+        DefinitionContentMedia_url,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.render_options")]
+        #pragma warning disable CS1591
+        DefinitionRender_options,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.render_options.shorten_links")]
+        #pragma warning disable CS1591
+        DefinitionRender_optionsShorten_links,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.render_options.add_org_prefix")]
+        #pragma warning disable CS1591
+        DefinitionRender_optionsAdd_org_prefix,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.render_options.add_info_link")]
+        #pragma warning disable CS1591
+        DefinitionRender_optionsAdd_info_link,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.render_options.add_opt_out_language")]
+        #pragma warning disable CS1591
+        DefinitionRender_optionsAdd_opt_out_language,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.notification_type")]
+        #pragma warning disable CS1591
+        DefinitionNotification_type,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.content.title")]
+        #pragma warning disable CS1591
+        DefinitionContentTitle,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.content.dynamic_image")]
+        #pragma warning disable CS1591
+        DefinitionContentDynamic_image,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.kv_pairs")]
+        #pragma warning disable CS1591
+        DefinitionKv_pairs,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.options")]
+        #pragma warning disable CS1591
+        DefinitionOptions,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.options.on_open")]
+        #pragma warning disable CS1591
+        DefinitionOptionsOn_open,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.options.on_open.type")]
+        #pragma warning disable CS1591
+        DefinitionOptionsOn_openType,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.options.on_open.ios_deep_link")]
+        #pragma warning disable CS1591
+        DefinitionOptionsOn_openIos_deep_link,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.options.on_open.android_deep_link")]
+        #pragma warning disable CS1591
+        DefinitionOptionsOn_openAndroid_deep_link,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.options.badge")]
+        #pragma warning disable CS1591
+        DefinitionOptionsBadge,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.options.badge.display")]
+        #pragma warning disable CS1591
+        DefinitionOptionsBadgeDisplay,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.options.badge.badge_options")]
+        #pragma warning disable CS1591
+        DefinitionOptionsBadgeBadge_options,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.options.badge.badge_options.badge_config")]
+        #pragma warning disable CS1591
+        DefinitionOptionsBadgeBadge_optionsBadge_config,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.options.badge.badge_options.value")]
+        #pragma warning disable CS1591
+        DefinitionOptionsBadgeBadge_optionsValue,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.options.badge.badge_options.set_from_property")]
+        #pragma warning disable CS1591
+        DefinitionOptionsBadgeBadge_optionsSet_from_property,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "definition.options.play_sound")]
+        #pragma warning disable CS1591
+        DefinitionOptionsPlay_sound,
         #pragma warning restore CS1591
         [EnumMember(Value = "send_times")]
         #pragma warning disable CS1591
         Send_times,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "render_options")]
-        #pragma warning disable CS1591
-        Render_options,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "render_options.shorten_links")]
-        #pragma warning disable CS1591
-        Render_optionsShorten_links,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "render_options.add_org_prefix")]
-        #pragma warning disable CS1591
-        Render_optionsAdd_org_prefix,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "render_options.add_info_link")]
-        #pragma warning disable CS1591
-        Render_optionsAdd_info_link,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "render_options.add_opt_out_language")]
-        #pragma warning disable CS1591
-        Render_optionsAdd_opt_out_language,
         #pragma warning restore CS1591
         [EnumMember(Value = "created_at")]
         #pragma warning disable CS1591

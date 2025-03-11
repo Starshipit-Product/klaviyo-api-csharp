@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class CampaignResponseObjectResource_attributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -19,10 +19,10 @@ namespace Klaviyo.Models
         /// <summary>The audiences property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Klaviyo.Models.AudiencesSubObject? Audiences { get; set; }
+        public global::Klaviyo.Models.Audiences? Audiences { get; set; }
 #nullable restore
 #else
-        public global::Klaviyo.Models.AudiencesSubObject Audiences { get; set; }
+        public global::Klaviyo.Models.Audiences Audiences { get; set; }
 #endif
         /// <summary>The datetime when the campaign was created</summary>
         public DateTimeOffset? CreatedAt { get; set; }
@@ -44,24 +44,18 @@ namespace Klaviyo.Models
 #else
         public global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_send_options SendOptions { get; set; }
 #endif
-        /// <summary>The send_strategy property</summary>
+        /// <summary>The send strategy the campaign will send with</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Klaviyo.Models.SendStrategySubObject? SendStrategy { get; set; }
+        public global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_send_strategy? SendStrategy { get; set; }
 #nullable restore
 #else
-        public global::Klaviyo.Models.SendStrategySubObject SendStrategy { get; set; }
+        public global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_send_strategy SendStrategy { get; set; }
 #endif
         /// <summary>The datetime when the campaign will be / was sent or None if not yet scheduled by a send_job.</summary>
         public DateTimeOffset? SendTime { get; set; }
         /// <summary>The current status of the campaign</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Status { get; set; }
-#nullable restore
-#else
-        public string Status { get; set; }
-#endif
+        public global::Klaviyo.Models.CampaignResponseObjectResource_attributes_status? Status { get; set; }
         /// <summary>The tracking options associated with the campaign</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -98,14 +92,14 @@ namespace Klaviyo.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
-                { "audiences", n => { Audiences = n.GetObjectValue<global::Klaviyo.Models.AudiencesSubObject>(global::Klaviyo.Models.AudiencesSubObject.CreateFromDiscriminatorValue); } },
+                { "audiences", n => { Audiences = n.GetObjectValue<global::Klaviyo.Models.Audiences>(global::Klaviyo.Models.Audiences.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "scheduled_at", n => { ScheduledAt = n.GetDateTimeOffsetValue(); } },
                 { "send_options", n => { SendOptions = n.GetObjectValue<global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_send_options>(global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_send_options.CreateFromDiscriminatorValue); } },
-                { "send_strategy", n => { SendStrategy = n.GetObjectValue<global::Klaviyo.Models.SendStrategySubObject>(global::Klaviyo.Models.SendStrategySubObject.CreateFromDiscriminatorValue); } },
+                { "send_strategy", n => { SendStrategy = n.GetObjectValue<global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_send_strategy>(global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_send_strategy.CreateFromDiscriminatorValue); } },
                 { "send_time", n => { SendTime = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetStringValue(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Klaviyo.Models.CampaignResponseObjectResource_attributes_status>(); } },
                 { "tracking_options", n => { TrackingOptions = n.GetObjectValue<global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_tracking_options>(global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_tracking_options.CreateFromDiscriminatorValue); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
@@ -118,39 +112,47 @@ namespace Klaviyo.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("archived", Archived);
-            writer.WriteObjectValue<global::Klaviyo.Models.AudiencesSubObject>("audiences", Audiences);
+            writer.WriteObjectValue<global::Klaviyo.Models.Audiences>("audiences", Audiences);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("scheduled_at", ScheduledAt);
             writer.WriteObjectValue<global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_send_options>("send_options", SendOptions);
-            writer.WriteObjectValue<global::Klaviyo.Models.SendStrategySubObject>("send_strategy", SendStrategy);
+            writer.WriteObjectValue<global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_send_strategy>("send_strategy", SendStrategy);
             writer.WriteDateTimeOffsetValue("send_time", SendTime);
-            writer.WriteStringValue("status", Status);
+            writer.WriteEnumValue<global::Klaviyo.Models.CampaignResponseObjectResource_attributes_status>("status", Status);
             writer.WriteObjectValue<global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_tracking_options>("tracking_options", TrackingOptions);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.EmailSendOptionsSubObject"/>, <see cref="global::Klaviyo.Models.SMSSendOptionsSubObject"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.EmailSendOptions"/>, <see cref="global::Klaviyo.Models.PushSendOptions"/>, <see cref="global::Klaviyo.Models.SMSSendOptions"/>
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CampaignResponseObjectResource_attributes_send_options : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.EmailSendOptionsSubObject"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.EmailSendOptions"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Klaviyo.Models.EmailSendOptionsSubObject? EmailSendOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.EmailSendOptions? EmailSendOptions { get; set; }
 #nullable restore
 #else
-            public global::Klaviyo.Models.EmailSendOptionsSubObject EmailSendOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.EmailSendOptions EmailSendOptions { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.SMSSendOptionsSubObject"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.PushSendOptions"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Klaviyo.Models.SMSSendOptionsSubObject? SMSSendOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.PushSendOptions? PushSendOptions { get; set; }
 #nullable restore
 #else
-            public global::Klaviyo.Models.SMSSendOptionsSubObject SMSSendOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.PushSendOptions PushSendOptions { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.SMSSendOptions"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.SMSSendOptions? SMSSendOptions { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.SMSSendOptions SMSSendOptions { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -162,13 +164,17 @@ namespace Klaviyo.Models
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
                 var result = new global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_send_options();
-                if("EmailSendOptionsSubObject".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                if("EmailSendOptions".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.EmailSendOptionsSubObject = new global::Klaviyo.Models.EmailSendOptionsSubObject();
+                    result.EmailSendOptions = new global::Klaviyo.Models.EmailSendOptions();
                 }
-                else if("SMSSendOptionsSubObject".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                else if("PushSendOptions".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.SMSSendOptionsSubObject = new global::Klaviyo.Models.SMSSendOptionsSubObject();
+                    result.PushSendOptions = new global::Klaviyo.Models.PushSendOptions();
+                }
+                else if("SMSSendOptions".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.SMSSendOptions = new global::Klaviyo.Models.SMSSendOptions();
                 }
                 return result;
             }
@@ -178,13 +184,17 @@ namespace Klaviyo.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(EmailSendOptionsSubObject != null)
+                if(EmailSendOptions != null)
                 {
-                    return EmailSendOptionsSubObject.GetFieldDeserializers();
+                    return EmailSendOptions.GetFieldDeserializers();
                 }
-                else if(SMSSendOptionsSubObject != null)
+                else if(PushSendOptions != null)
                 {
-                    return SMSSendOptionsSubObject.GetFieldDeserializers();
+                    return PushSendOptions.GetFieldDeserializers();
+                }
+                else if(SMSSendOptions != null)
+                {
+                    return SMSSendOptions.GetFieldDeserializers();
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -195,37 +205,196 @@ namespace Klaviyo.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
-                if(EmailSendOptionsSubObject != null)
+                if(EmailSendOptions != null)
                 {
-                    writer.WriteObjectValue<global::Klaviyo.Models.EmailSendOptionsSubObject>(null, EmailSendOptionsSubObject);
+                    writer.WriteObjectValue<global::Klaviyo.Models.EmailSendOptions>(null, EmailSendOptions);
                 }
-                else if(SMSSendOptionsSubObject != null)
+                else if(PushSendOptions != null)
                 {
-                    writer.WriteObjectValue<global::Klaviyo.Models.SMSSendOptionsSubObject>(null, SMSSendOptionsSubObject);
+                    writer.WriteObjectValue<global::Klaviyo.Models.PushSendOptions>(null, PushSendOptions);
+                }
+                else if(SMSSendOptions != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.SMSSendOptions>(null, SMSSendOptions);
                 }
             }
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.EmailTrackingOptionsSubObject"/>, <see cref="global::Klaviyo.Models.SMSTrackingOptionsSubObject"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.ABTestSendStrategy"/>, <see cref="global::Klaviyo.Models.ImmediateSendStrategy"/>, <see cref="global::Klaviyo.Models.SmartSendTimeStrategy"/>, <see cref="global::Klaviyo.Models.StaticSendStrategy"/>, <see cref="global::Klaviyo.Models.ThrottledSendStrategy"/>, <see cref="global::Klaviyo.Models.UnsupportedSendStrategy"/>
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class CampaignResponseObjectResource_attributes_send_strategy : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ABTestSendStrategy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.ABTestSendStrategy? ABTestSendStrategy { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.ABTestSendStrategy ABTestSendStrategy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ImmediateSendStrategy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.ImmediateSendStrategy? ImmediateSendStrategy { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.ImmediateSendStrategy ImmediateSendStrategy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.SmartSendTimeStrategy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.SmartSendTimeStrategy? SmartSendTimeStrategy { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.SmartSendTimeStrategy SmartSendTimeStrategy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.StaticSendStrategy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.StaticSendStrategy? StaticSendStrategy { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.StaticSendStrategy StaticSendStrategy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ThrottledSendStrategy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.ThrottledSendStrategy? ThrottledSendStrategy { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.ThrottledSendStrategy ThrottledSendStrategy { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.UnsupportedSendStrategy"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.UnsupportedSendStrategy? UnsupportedSendStrategy { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.UnsupportedSendStrategy UnsupportedSendStrategy { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_send_strategy"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_send_strategy CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_send_strategy();
+                if("ABTestSendStrategy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ABTestSendStrategy = new global::Klaviyo.Models.ABTestSendStrategy();
+                }
+                else if("ImmediateSendStrategy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ImmediateSendStrategy = new global::Klaviyo.Models.ImmediateSendStrategy();
+                }
+                else if("SmartSendTimeStrategy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.SmartSendTimeStrategy = new global::Klaviyo.Models.SmartSendTimeStrategy();
+                }
+                else if("StaticSendStrategy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.StaticSendStrategy = new global::Klaviyo.Models.StaticSendStrategy();
+                }
+                else if("ThrottledSendStrategy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ThrottledSendStrategy = new global::Klaviyo.Models.ThrottledSendStrategy();
+                }
+                else if("UnsupportedSendStrategy".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.UnsupportedSendStrategy = new global::Klaviyo.Models.UnsupportedSendStrategy();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(ABTestSendStrategy != null)
+                {
+                    return ABTestSendStrategy.GetFieldDeserializers();
+                }
+                else if(ImmediateSendStrategy != null)
+                {
+                    return ImmediateSendStrategy.GetFieldDeserializers();
+                }
+                else if(SmartSendTimeStrategy != null)
+                {
+                    return SmartSendTimeStrategy.GetFieldDeserializers();
+                }
+                else if(StaticSendStrategy != null)
+                {
+                    return StaticSendStrategy.GetFieldDeserializers();
+                }
+                else if(ThrottledSendStrategy != null)
+                {
+                    return ThrottledSendStrategy.GetFieldDeserializers();
+                }
+                else if(UnsupportedSendStrategy != null)
+                {
+                    return UnsupportedSendStrategy.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ABTestSendStrategy != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.ABTestSendStrategy>(null, ABTestSendStrategy);
+                }
+                else if(ImmediateSendStrategy != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.ImmediateSendStrategy>(null, ImmediateSendStrategy);
+                }
+                else if(SmartSendTimeStrategy != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.SmartSendTimeStrategy>(null, SmartSendTimeStrategy);
+                }
+                else if(StaticSendStrategy != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.StaticSendStrategy>(null, StaticSendStrategy);
+                }
+                else if(ThrottledSendStrategy != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.ThrottledSendStrategy>(null, ThrottledSendStrategy);
+                }
+                else if(UnsupportedSendStrategy != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.UnsupportedSendStrategy>(null, UnsupportedSendStrategy);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.CampaignsEmailTrackingOptions"/>, <see cref="global::Klaviyo.Models.CampaignsSMSTrackingOptions"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CampaignResponseObjectResource_attributes_tracking_options : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.EmailTrackingOptionsSubObject"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.CampaignsEmailTrackingOptions"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Klaviyo.Models.EmailTrackingOptionsSubObject? EmailTrackingOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.CampaignsEmailTrackingOptions? CampaignsEmailTrackingOptions { get; set; }
 #nullable restore
 #else
-            public global::Klaviyo.Models.EmailTrackingOptionsSubObject EmailTrackingOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.CampaignsEmailTrackingOptions CampaignsEmailTrackingOptions { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.SMSTrackingOptionsSubObject"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.CampaignsSMSTrackingOptions"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Klaviyo.Models.SMSTrackingOptionsSubObject? SMSTrackingOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.CampaignsSMSTrackingOptions? CampaignsSMSTrackingOptions { get; set; }
 #nullable restore
 #else
-            public global::Klaviyo.Models.SMSTrackingOptionsSubObject SMSTrackingOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.CampaignsSMSTrackingOptions CampaignsSMSTrackingOptions { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -237,13 +406,13 @@ namespace Klaviyo.Models
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
                 var result = new global::Klaviyo.Models.CampaignResponseObjectResource_attributes.CampaignResponseObjectResource_attributes_tracking_options();
-                if("EmailTrackingOptionsSubObject".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                if("CampaignsEmailTrackingOptions".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.EmailTrackingOptionsSubObject = new global::Klaviyo.Models.EmailTrackingOptionsSubObject();
+                    result.CampaignsEmailTrackingOptions = new global::Klaviyo.Models.CampaignsEmailTrackingOptions();
                 }
-                else if("SMSTrackingOptionsSubObject".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                else if("CampaignsSMSTrackingOptions".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.SMSTrackingOptionsSubObject = new global::Klaviyo.Models.SMSTrackingOptionsSubObject();
+                    result.CampaignsSMSTrackingOptions = new global::Klaviyo.Models.CampaignsSMSTrackingOptions();
                 }
                 return result;
             }
@@ -253,13 +422,13 @@ namespace Klaviyo.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(EmailTrackingOptionsSubObject != null)
+                if(CampaignsEmailTrackingOptions != null)
                 {
-                    return EmailTrackingOptionsSubObject.GetFieldDeserializers();
+                    return CampaignsEmailTrackingOptions.GetFieldDeserializers();
                 }
-                else if(SMSTrackingOptionsSubObject != null)
+                else if(CampaignsSMSTrackingOptions != null)
                 {
-                    return SMSTrackingOptionsSubObject.GetFieldDeserializers();
+                    return CampaignsSMSTrackingOptions.GetFieldDeserializers();
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -270,13 +439,13 @@ namespace Klaviyo.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
-                if(EmailTrackingOptionsSubObject != null)
+                if(CampaignsEmailTrackingOptions != null)
                 {
-                    writer.WriteObjectValue<global::Klaviyo.Models.EmailTrackingOptionsSubObject>(null, EmailTrackingOptionsSubObject);
+                    writer.WriteObjectValue<global::Klaviyo.Models.CampaignsEmailTrackingOptions>(null, CampaignsEmailTrackingOptions);
                 }
-                else if(SMSTrackingOptionsSubObject != null)
+                else if(CampaignsSMSTrackingOptions != null)
                 {
-                    writer.WriteObjectValue<global::Klaviyo.Models.SMSTrackingOptionsSubObject>(null, SMSTrackingOptionsSubObject);
+                    writer.WriteObjectValue<global::Klaviyo.Models.CampaignsSMSTrackingOptions>(null, CampaignsSMSTrackingOptions);
                 }
             }
         }

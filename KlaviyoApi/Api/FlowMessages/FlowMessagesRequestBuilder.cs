@@ -12,7 +12,7 @@ namespace Klaviyo.Api.FlowMessages
     /// <summary>
     /// Builds and executes requests for operations under \api\flow-messages
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FlowMessagesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Klaviyo.api.flowMessages.item collection</summary>

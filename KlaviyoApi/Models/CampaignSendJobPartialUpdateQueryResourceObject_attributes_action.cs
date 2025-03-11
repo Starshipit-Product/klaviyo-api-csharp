@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>The action you would like to take with this send job from among &apos;cancel&apos; and &apos;revert&apos;</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CampaignSendJobPartialUpdateQueryResourceObject_attributes_action
     {
         [EnumMember(Value = "cancel")]

@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>Dimension for string profile predictive analytics conditions.</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ProfilePredictiveAnalyticsStringCondition_dimension
     {
         [EnumMember(Value = "predicted_gender")]

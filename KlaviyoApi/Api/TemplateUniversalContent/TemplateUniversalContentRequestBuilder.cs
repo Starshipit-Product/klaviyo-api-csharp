@@ -15,7 +15,7 @@ namespace Klaviyo.Api.TemplateUniversalContent
     /// <summary>
     /// Builds and executes requests for operations under \api\template-universal-content
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TemplateUniversalContentRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Klaviyo.api.templateUniversalContent.item collection</summary>
@@ -151,10 +151,10 @@ namespace Klaviyo.Api.TemplateUniversalContent
         /// <summary>
         /// Get all universal content in an account.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`templates:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TemplateUniversalContentRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldstemplateUniversalContentAsGetFieldsTemplateUniversalContentQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -165,7 +165,7 @@ namespace Klaviyo.Api.TemplateUniversalContent
             [QueryParameter("fields%5Btemplate%2Duniversal%2Dcontent%5D")]
             public string[] FieldstemplateUniversalContent { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Btemplate%2Duniversal%2Dcontent%5D")]
@@ -175,7 +175,7 @@ namespace Klaviyo.Api.TemplateUniversalContent
             [QueryParameter("fields%5Btemplate%2Duniversal%2Dcontent%5D")]
             public global::Klaviyo.Api.TemplateUniversalContent.GetFieldsTemplateUniversalContentQueryParameterType[] FieldstemplateUniversalContentAsGetFieldsTemplateUniversalContentQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`id`: `any`, `equals`&lt;br&gt;`name`: `any`, `equals`&lt;br&gt;`created`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`updated`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`definition.content_type`: `equals`&lt;br&gt;`definition.type`: `equals`</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`id`: `any`, `equals`&lt;br&gt;`name`: `any`, `equals`&lt;br&gt;`created`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`updated`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`definition.content_type`: `equals`&lt;br&gt;`definition.type`: `equals`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -185,7 +185,7 @@ namespace Klaviyo.Api.TemplateUniversalContent
             [QueryParameter("filter")]
             public string Filter { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#pagination</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#pagination</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page%5Bcursor%5D")]
@@ -198,7 +198,7 @@ namespace Klaviyo.Api.TemplateUniversalContent
             /// <summary>Default: 20. Min: 1. Max: 100.</summary>
             [QueryParameter("page%5Bsize%5D")]
             public int? Pagesize { get; set; }
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -209,7 +209,7 @@ namespace Klaviyo.Api.TemplateUniversalContent
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [QueryParameter("sort")]
             public global::Klaviyo.Api.TemplateUniversalContent.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
         }
@@ -217,7 +217,7 @@ namespace Klaviyo.Api.TemplateUniversalContent
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TemplateUniversalContentRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.TemplateUniversalContent.TemplateUniversalContentRequestBuilder.TemplateUniversalContentRequestBuilderGetQueryParameters>
         {
         }
@@ -225,7 +225,7 @@ namespace Klaviyo.Api.TemplateUniversalContent
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TemplateUniversalContentRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
         {
         }

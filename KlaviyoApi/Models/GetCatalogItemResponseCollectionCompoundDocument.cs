@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class GetCatalogItemResponseCollectionCompoundDocument : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -17,10 +17,10 @@ namespace Klaviyo.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Klaviyo.Models.CatalogItemResponseObjectResource>? Data { get; set; }
+        public List<global::Klaviyo.Models.GetCatalogItemResponseCollectionCompoundDocument_data>? Data { get; set; }
 #nullable restore
 #else
-        public List<global::Klaviyo.Models.CatalogItemResponseObjectResource> Data { get; set; }
+        public List<global::Klaviyo.Models.GetCatalogItemResponseCollectionCompoundDocument_data> Data { get; set; }
 #endif
         /// <summary>The included property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Klaviyo.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Klaviyo.Models.CatalogItemResponseObjectResource>(global::Klaviyo.Models.CatalogItemResponseObjectResource.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Klaviyo.Models.GetCatalogItemResponseCollectionCompoundDocument_data>(global::Klaviyo.Models.GetCatalogItemResponseCollectionCompoundDocument_data.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "included", n => { Included = n.GetCollectionOfObjectValues<global::Klaviyo.Models.CatalogVariantResponseObjectResource>(global::Klaviyo.Models.CatalogVariantResponseObjectResource.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Klaviyo.Models.CollectionLinks>(global::Klaviyo.Models.CollectionLinks.CreateFromDiscriminatorValue); } },
             };
@@ -75,7 +75,7 @@ namespace Klaviyo.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.CatalogItemResponseObjectResource>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.GetCatalogItemResponseCollectionCompoundDocument_data>("data", Data);
             writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.CatalogVariantResponseObjectResource>("included", Included);
             writer.WriteObjectValue<global::Klaviyo.Models.CollectionLinks>("links", Links);
             writer.WriteAdditionalData(AdditionalData);

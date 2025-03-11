@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>Attributes to represent what is being grouped by for Forms</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum FormSeriesRequestDTOResourceObject_attributes_group_by
     {
         [EnumMember(Value = "form_id")]

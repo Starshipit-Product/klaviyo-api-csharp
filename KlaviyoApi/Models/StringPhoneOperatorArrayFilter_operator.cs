@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>Operators for phone string array filters.Example condition using this filter:    {</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum StringPhoneOperatorArrayFilter_operator
     {
         [EnumMember(Value = "phone-country-code-in")]

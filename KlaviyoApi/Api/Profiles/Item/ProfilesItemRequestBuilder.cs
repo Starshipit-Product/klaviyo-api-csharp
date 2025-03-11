@@ -17,7 +17,7 @@ namespace Klaviyo.Api.Profiles.Item
     /// <summary>
     /// Builds and executes requests for operations under \api\profiles\{id}
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProfilesItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The lists property</summary>
@@ -52,7 +52,7 @@ namespace Klaviyo.Api.Profiles.Item
         {
         }
         /// <summary>
-        /// Get the profile with the given profile ID.Use the `additional-fields` parameter to include subscriptions and predictive analytics data in your response.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `include=list` parameter in your API request:&lt;br&gt;Burst: `1/s`&lt;br&gt;Steady: `15/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `include=segment` parameter in your API request:&lt;br&gt;Burst: `1/s`&lt;br&gt;Steady: `15/m`&lt;br&gt;&lt;br&gt;To learn more about how the `include` parameter impacts rate limits, check out our [Rate limits, status codes, and errors](https://developers.klaviyo.com/en/v2024-10-15/docs/rate_limits_and_error_handling) guide.**Scopes:**`profiles:read`
+        /// Get the profile with the given profile ID.Use the `additional-fields` parameter to include subscriptions and predictive analytics data in your response.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `include=list` parameter in your API request:&lt;br&gt;Burst: `1/s`&lt;br&gt;Steady: `15/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `include=segment` parameter in your API request:&lt;br&gt;Burst: `1/s`&lt;br&gt;Steady: `15/m`&lt;br&gt;&lt;br&gt;To learn more about how the `include` parameter impacts rate limits, check out our [Rate limits, status codes, and errors](https://developers.klaviyo.com/en/v2025-01-15/docs/rate_limits_and_error_handling) guide.**Scopes:**`profiles:read`
         /// </summary>
         /// <returns>A <see cref="global::Klaviyo.Models.GetProfileResponseCompoundDocument"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -104,7 +104,7 @@ namespace Klaviyo.Api.Profiles.Item
             return await RequestAdapter.SendAsync<global::Klaviyo.Models.PatchProfileResponse>(requestInfo, global::Klaviyo.Models.PatchProfileResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get the profile with the given profile ID.Use the `additional-fields` parameter to include subscriptions and predictive analytics data in your response.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `include=list` parameter in your API request:&lt;br&gt;Burst: `1/s`&lt;br&gt;Steady: `15/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `include=segment` parameter in your API request:&lt;br&gt;Burst: `1/s`&lt;br&gt;Steady: `15/m`&lt;br&gt;&lt;br&gt;To learn more about how the `include` parameter impacts rate limits, check out our [Rate limits, status codes, and errors](https://developers.klaviyo.com/en/v2024-10-15/docs/rate_limits_and_error_handling) guide.**Scopes:**`profiles:read`
+        /// Get the profile with the given profile ID.Use the `additional-fields` parameter to include subscriptions and predictive analytics data in your response.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `include=list` parameter in your API request:&lt;br&gt;Burst: `1/s`&lt;br&gt;Steady: `15/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `include=segment` parameter in your API request:&lt;br&gt;Burst: `1/s`&lt;br&gt;Steady: `15/m`&lt;br&gt;&lt;br&gt;To learn more about how the `include` parameter impacts rate limits, check out our [Rate limits, status codes, and errors](https://developers.klaviyo.com/en/v2025-01-15/docs/rate_limits_and_error_handling) guide.**Scopes:**`profiles:read`
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -154,9 +154,9 @@ namespace Klaviyo.Api.Profiles.Item
             return new global::Klaviyo.Api.Profiles.Item.ProfilesItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get the profile with the given profile ID.Use the `additional-fields` parameter to include subscriptions and predictive analytics data in your response.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `include=list` parameter in your API request:&lt;br&gt;Burst: `1/s`&lt;br&gt;Steady: `15/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `include=segment` parameter in your API request:&lt;br&gt;Burst: `1/s`&lt;br&gt;Steady: `15/m`&lt;br&gt;&lt;br&gt;To learn more about how the `include` parameter impacts rate limits, check out our [Rate limits, status codes, and errors](https://developers.klaviyo.com/en/v2024-10-15/docs/rate_limits_and_error_handling) guide.**Scopes:**`profiles:read`
+        /// Get the profile with the given profile ID.Use the `additional-fields` parameter to include subscriptions and predictive analytics data in your response.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `include=list` parameter in your API request:&lt;br&gt;Burst: `1/s`&lt;br&gt;Steady: `15/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `include=segment` parameter in your API request:&lt;br&gt;Burst: `1/s`&lt;br&gt;Steady: `15/m`&lt;br&gt;&lt;br&gt;To learn more about how the `include` parameter impacts rate limits, check out our [Rate limits, status codes, and errors](https://developers.klaviyo.com/en/v2025-01-15/docs/rate_limits_and_error_handling) guide.**Scopes:**`profiles:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProfilesItemRequestBuilderGetQueryParameters 
         {
             /// <summary>Request additional fields not included by default in the response. Supported values: &apos;subscriptions&apos;, &apos;predictive_analytics&apos;</summary>
@@ -180,7 +180,7 @@ namespace Klaviyo.Api.Profiles.Item
             [QueryParameter("additional%2Dfields%5Bprofile%5D")]
             public global::Klaviyo.Api.Profiles.Item.GetAdditionalFieldsProfileQueryParameterType[] AdditionalFieldsprofileAsGetAdditionalFieldsProfileQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldslistAsGetFieldsListQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -191,7 +191,7 @@ namespace Klaviyo.Api.Profiles.Item
             [QueryParameter("fields%5Blist%5D")]
             public string[] Fieldslist { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Blist%5D")]
@@ -201,7 +201,7 @@ namespace Klaviyo.Api.Profiles.Item
             [QueryParameter("fields%5Blist%5D")]
             public global::Klaviyo.Api.Profiles.Item.GetFieldsListQueryParameterType[] FieldslistAsGetFieldsListQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsprofileAsGetFieldsProfileQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -212,7 +212,7 @@ namespace Klaviyo.Api.Profiles.Item
             [QueryParameter("fields%5Bprofile%5D")]
             public string[] Fieldsprofile { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bprofile%5D")]
@@ -222,7 +222,7 @@ namespace Klaviyo.Api.Profiles.Item
             [QueryParameter("fields%5Bprofile%5D")]
             public global::Klaviyo.Api.Profiles.Item.GetFieldsProfileQueryParameterType[] FieldsprofileAsGetFieldsProfileQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldssegmentAsGetFieldsSegmentQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -233,7 +233,7 @@ namespace Klaviyo.Api.Profiles.Item
             [QueryParameter("fields%5Bsegment%5D")]
             public string[] Fieldssegment { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bsegment%5D")]
@@ -243,7 +243,7 @@ namespace Klaviyo.Api.Profiles.Item
             [QueryParameter("fields%5Bsegment%5D")]
             public global::Klaviyo.Api.Profiles.Item.GetFieldsSegmentQueryParameterType[] FieldssegmentAsGetFieldsSegmentQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
             [Obsolete("This property is deprecated, use IncludeAsGetIncludeQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -254,7 +254,7 @@ namespace Klaviyo.Api.Profiles.Item
             [QueryParameter("include")]
             public string[] Include { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include")]
@@ -269,14 +269,14 @@ namespace Klaviyo.Api.Profiles.Item
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProfilesItemRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.Profiles.Item.ProfilesItemRequestBuilder.ProfilesItemRequestBuilderGetQueryParameters>
         {
         }
         /// <summary>
         /// Update the profile with the given profile ID.Use the `additional-fields` parameter to include subscriptions and predictive analytics data in your response.Note that setting a field to `null` will clear out the field, whereas not including a field in your request will leave it unchanged.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`**Scopes:**`profiles:write`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProfilesItemRequestBuilderPatchQueryParameters 
         {
             /// <summary>Request additional fields not included by default in the response. Supported values: &apos;subscriptions&apos;, &apos;predictive_analytics&apos;</summary>
@@ -305,7 +305,7 @@ namespace Klaviyo.Api.Profiles.Item
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProfilesItemRequestBuilderPatchRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.Profiles.Item.ProfilesItemRequestBuilder.ProfilesItemRequestBuilderPatchQueryParameters>
         {
         }

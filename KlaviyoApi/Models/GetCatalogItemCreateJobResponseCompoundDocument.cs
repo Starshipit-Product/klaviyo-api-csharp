@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class GetCatalogItemCreateJobResponseCompoundDocument : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -17,10 +17,10 @@ namespace Klaviyo.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Klaviyo.Models.CatalogItemCreateJobResponseObjectResource? Data { get; set; }
+        public global::Klaviyo.Models.GetCatalogItemCreateJobResponseCompoundDocument_data? Data { get; set; }
 #nullable restore
 #else
-        public global::Klaviyo.Models.CatalogItemCreateJobResponseObjectResource Data { get; set; }
+        public global::Klaviyo.Models.GetCatalogItemCreateJobResponseCompoundDocument_data Data { get; set; }
 #endif
         /// <summary>The included property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Klaviyo.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Klaviyo.Models.CatalogItemCreateJobResponseObjectResource>(global::Klaviyo.Models.CatalogItemCreateJobResponseObjectResource.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Klaviyo.Models.GetCatalogItemCreateJobResponseCompoundDocument_data>(global::Klaviyo.Models.GetCatalogItemCreateJobResponseCompoundDocument_data.CreateFromDiscriminatorValue); } },
                 { "included", n => { Included = n.GetCollectionOfObjectValues<global::Klaviyo.Models.CatalogItemResponseObjectResource>(global::Klaviyo.Models.CatalogItemResponseObjectResource.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Klaviyo.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Klaviyo.Models.CatalogItemCreateJobResponseObjectResource>("data", Data);
+            writer.WriteObjectValue<global::Klaviyo.Models.GetCatalogItemCreateJobResponseCompoundDocument_data>("data", Data);
             writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.CatalogItemResponseObjectResource>("included", Included);
             writer.WriteAdditionalData(AdditionalData);
         }

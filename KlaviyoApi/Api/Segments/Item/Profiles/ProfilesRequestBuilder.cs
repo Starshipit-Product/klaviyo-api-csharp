@@ -14,7 +14,7 @@ namespace Klaviyo.Api.Segments.Item.Profiles
     /// <summary>
     /// Builds and executes requests for operations under \api\segments\{id}\profiles
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProfilesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
@@ -89,7 +89,7 @@ namespace Klaviyo.Api.Segments.Item.Profiles
         /// <summary>
         /// Get all profiles within a segment with the given segment ID.Filter to request a subset of all profiles. Profiles can be filtered by `email`, `phone_number`, `push_token`, and `joined_group_at` fields. Profiles can be sorted by the following fields, in ascending and descending order: `joined_group_at`&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`**Scopes:**`profiles:read``segments:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProfilesRequestBuilderGetQueryParameters 
         {
             /// <summary>Request additional fields not included by default in the response. Supported values: &apos;subscriptions&apos;, &apos;predictive_analytics&apos;</summary>
@@ -113,7 +113,7 @@ namespace Klaviyo.Api.Segments.Item.Profiles
             [QueryParameter("additional%2Dfields%5Bprofile%5D")]
             public global::Klaviyo.Api.Segments.Item.Profiles.GetAdditionalFieldsProfileQueryParameterType[] AdditionalFieldsprofileAsGetAdditionalFieldsProfileQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsprofileAsGetFieldsProfileQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -124,7 +124,7 @@ namespace Klaviyo.Api.Segments.Item.Profiles
             [QueryParameter("fields%5Bprofile%5D")]
             public string[] Fieldsprofile { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bprofile%5D")]
@@ -134,7 +134,7 @@ namespace Klaviyo.Api.Segments.Item.Profiles
             [QueryParameter("fields%5Bprofile%5D")]
             public global::Klaviyo.Api.Segments.Item.Profiles.GetFieldsProfileQueryParameterType[] FieldsprofileAsGetFieldsProfileQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`email`: `any`, `equals`&lt;br&gt;`phone_number`: `any`, `equals`&lt;br&gt;`push_token`: `any`, `equals`&lt;br&gt;`_kx`: `equals`&lt;br&gt;`joined_group_at`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`email`: `any`, `equals`&lt;br&gt;`phone_number`: `any`, `equals`&lt;br&gt;`push_token`: `any`, `equals`&lt;br&gt;`_kx`: `equals`&lt;br&gt;`joined_group_at`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -144,7 +144,7 @@ namespace Klaviyo.Api.Segments.Item.Profiles
             [QueryParameter("filter")]
             public string Filter { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#pagination</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#pagination</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page%5Bcursor%5D")]
@@ -157,7 +157,7 @@ namespace Klaviyo.Api.Segments.Item.Profiles
             /// <summary>Default: 20. Min: 1. Max: 100.</summary>
             [QueryParameter("page%5Bsize%5D")]
             public int? Pagesize { get; set; }
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -168,7 +168,7 @@ namespace Klaviyo.Api.Segments.Item.Profiles
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [QueryParameter("sort")]
             public global::Klaviyo.Api.Segments.Item.Profiles.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
         }
@@ -176,7 +176,7 @@ namespace Klaviyo.Api.Segments.Item.Profiles
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProfilesRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.Segments.Item.Profiles.ProfilesRequestBuilder.ProfilesRequestBuilderGetQueryParameters>
         {
         }

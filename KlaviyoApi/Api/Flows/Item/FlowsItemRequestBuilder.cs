@@ -17,7 +17,7 @@ namespace Klaviyo.Api.Flows.Item
     /// <summary>
     /// Builds and executes requests for operations under \api\flows\{id}
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FlowsItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The flowActions property</summary>
@@ -40,7 +40,7 @@ namespace Klaviyo.Api.Flows.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FlowsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/flows/{id}{?fields%5Bflow%2Daction%5D,fields%5Bflow%5D,fields%5Btag%5D,include}", pathParameters)
+        public FlowsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/flows/{id}{?additional%2Dfields%5Bflow%5D,fields%5Bflow%2Daction%5D,fields%5Bflow%5D,fields%5Btag%5D,include}", pathParameters)
         {
         }
         /// <summary>
@@ -48,7 +48,7 @@ namespace Klaviyo.Api.Flows.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FlowsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/flows/{id}{?fields%5Bflow%2Daction%5D,fields%5Bflow%5D,fields%5Btag%5D,include}", rawUrl)
+        public FlowsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/flows/{id}{?additional%2Dfields%5Bflow%5D,fields%5Bflow%2Daction%5D,fields%5Bflow%5D,fields%5Btag%5D,include}", rawUrl)
         {
         }
         /// <summary>
@@ -78,27 +78,27 @@ namespace Klaviyo.Api.Flows.Item
         /// <summary>
         /// Get a flow with the given flow ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`flows:read`
         /// </summary>
-        /// <returns>A <see cref="global::Klaviyo.Models.GetFlowResponseCompoundDocument"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetFlowV2ResponseCompoundDocument"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Klaviyo.Models.GetFlowResponseCompoundDocument4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Klaviyo.Models.GetFlowResponseCompoundDocument5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetFlowV2ResponseCompoundDocument4XXError">When receiving a 4XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetFlowV2ResponseCompoundDocument5XXError">When receiving a 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Klaviyo.Models.GetFlowResponseCompoundDocument?> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Flows.Item.FlowsItemRequestBuilder.FlowsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetFlowV2ResponseCompoundDocument?> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Flows.Item.FlowsItemRequestBuilder.FlowsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Klaviyo.Models.GetFlowResponseCompoundDocument> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Flows.Item.FlowsItemRequestBuilder.FlowsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetFlowV2ResponseCompoundDocument> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Flows.Item.FlowsItemRequestBuilder.FlowsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Klaviyo.Models.GetFlowResponseCompoundDocument4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Klaviyo.Models.GetFlowResponseCompoundDocument5XXError.CreateFromDiscriminatorValue },
+                { "4XX", global::Klaviyo.Models.GetFlowV2ResponseCompoundDocument4XXError.CreateFromDiscriminatorValue },
+                { "5XX", global::Klaviyo.Models.GetFlowV2ResponseCompoundDocument5XXError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetFlowResponseCompoundDocument>(requestInfo, global::Klaviyo.Models.GetFlowResponseCompoundDocument.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetFlowV2ResponseCompoundDocument>(requestInfo, global::Klaviyo.Models.GetFlowV2ResponseCompoundDocument.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the status of a flow with the given flow ID, and all actions in that flow.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`flows:write`
@@ -200,17 +200,38 @@ namespace Klaviyo.Api.Flows.Item
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FlowsItemRequestBuilderDeleteRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
         {
         }
         /// <summary>
         /// Get a flow with the given flow ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`flows:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FlowsItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>Request additional fields not included by default in the response. Supported values: &apos;definition&apos;</summary>
+            [Obsolete("This property is deprecated, use AdditionalFieldsflowAsGetAdditionalFieldsFlowQueryParameterType instead")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("additional%2Dfields%5Bflow%5D")]
+            public string[]? AdditionalFieldsflow { get; set; }
+#nullable restore
+#else
+            [QueryParameter("additional%2Dfields%5Bflow%5D")]
+            public string[] AdditionalFieldsflow { get; set; }
+#endif
+            /// <summary>Request additional fields not included by default in the response. Supported values: &apos;definition&apos;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("additional%2Dfields%5Bflow%5D")]
+            public global::Klaviyo.Api.Flows.Item.GetAdditionalFieldsFlowQueryParameterType[]? AdditionalFieldsflowAsGetAdditionalFieldsFlowQueryParameterType { get; set; }
+#nullable restore
+#else
+            [QueryParameter("additional%2Dfields%5Bflow%5D")]
+            public global::Klaviyo.Api.Flows.Item.GetAdditionalFieldsFlowQueryParameterType[] AdditionalFieldsflowAsGetAdditionalFieldsFlowQueryParameterType { get; set; }
+#endif
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsflowAsGetFieldsFlowQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -221,7 +242,7 @@ namespace Klaviyo.Api.Flows.Item
             [QueryParameter("fields%5Bflow%5D")]
             public string[] Fieldsflow { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsflowActionAsGetFieldsFlowActionQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -232,7 +253,7 @@ namespace Klaviyo.Api.Flows.Item
             [QueryParameter("fields%5Bflow%2Daction%5D")]
             public string[] FieldsflowAction { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bflow%2Daction%5D")]
@@ -242,7 +263,7 @@ namespace Klaviyo.Api.Flows.Item
             [QueryParameter("fields%5Bflow%2Daction%5D")]
             public global::Klaviyo.Api.Flows.Item.GetFieldsFlowActionQueryParameterType[] FieldsflowActionAsGetFieldsFlowActionQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bflow%5D")]
@@ -252,7 +273,7 @@ namespace Klaviyo.Api.Flows.Item
             [QueryParameter("fields%5Bflow%5D")]
             public global::Klaviyo.Api.Flows.Item.GetFieldsFlowQueryParameterType[] FieldsflowAsGetFieldsFlowQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldstagAsGetFieldsTagQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -263,7 +284,7 @@ namespace Klaviyo.Api.Flows.Item
             [QueryParameter("fields%5Btag%5D")]
             public string[] Fieldstag { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Btag%5D")]
@@ -273,7 +294,7 @@ namespace Klaviyo.Api.Flows.Item
             [QueryParameter("fields%5Btag%5D")]
             public global::Klaviyo.Api.Flows.Item.GetFieldsTagQueryParameterType[] FieldstagAsGetFieldsTagQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
             [Obsolete("This property is deprecated, use IncludeAsGetIncludeQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -284,7 +305,7 @@ namespace Klaviyo.Api.Flows.Item
             [QueryParameter("include")]
             public string[] Include { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include")]
@@ -299,7 +320,7 @@ namespace Klaviyo.Api.Flows.Item
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FlowsItemRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.Flows.Item.FlowsItemRequestBuilder.FlowsItemRequestBuilderGetQueryParameters>
         {
         }
@@ -307,7 +328,7 @@ namespace Klaviyo.Api.Flows.Item
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FlowsItemRequestBuilderPatchRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
         {
         }

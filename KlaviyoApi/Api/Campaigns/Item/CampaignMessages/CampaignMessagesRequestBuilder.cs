@@ -14,7 +14,7 @@ namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
     /// <summary>
     /// Builds and executes requests for operations under \api\campaigns\{id}\campaign-messages
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CampaignMessagesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
@@ -22,7 +22,7 @@ namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CampaignMessagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/campaigns/{id}/campaign-messages{?fields%5Bcampaign%2Dmessage%5D,fields%5Bcampaign%5D,fields%5Btemplate%5D,include}", pathParameters)
+        public CampaignMessagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/campaigns/{id}/campaign-messages{?fields%5Bcampaign%2Dmessage%5D,fields%5Bcampaign%5D,fields%5Bimage%5D,fields%5Btemplate%5D,include}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CampaignMessagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/campaigns/{id}/campaign-messages{?fields%5Bcampaign%2Dmessage%5D,fields%5Bcampaign%5D,fields%5Btemplate%5D,include}", rawUrl)
+        public CampaignMessagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/campaigns/{id}/campaign-messages{?fields%5Bcampaign%2Dmessage%5D,fields%5Bcampaign%5D,fields%5Bimage%5D,fields%5Btemplate%5D,include}", rawUrl)
         {
         }
         /// <summary>
@@ -89,10 +89,10 @@ namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
         /// <summary>
         /// Return all messages that belong to the given campaign.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`campaigns:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CampaignMessagesRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldscampaignAsGetFieldsCampaignQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -103,7 +103,7 @@ namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
             [QueryParameter("fields%5Bcampaign%5D")]
             public string[] Fieldscampaign { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bcampaign%5D")]
@@ -113,7 +113,7 @@ namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
             [QueryParameter("fields%5Bcampaign%5D")]
             public global::Klaviyo.Api.Campaigns.Item.CampaignMessages.GetFieldsCampaignQueryParameterType[] FieldscampaignAsGetFieldsCampaignQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldscampaignMessageAsGetFieldsCampaignMessageQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -124,7 +124,7 @@ namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
             [QueryParameter("fields%5Bcampaign%2Dmessage%5D")]
             public string[] FieldscampaignMessage { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bcampaign%2Dmessage%5D")]
@@ -134,7 +134,28 @@ namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
             [QueryParameter("fields%5Bcampaign%2Dmessage%5D")]
             public global::Klaviyo.Api.Campaigns.Item.CampaignMessages.GetFieldsCampaignMessageQueryParameterType[] FieldscampaignMessageAsGetFieldsCampaignMessageQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
+            [Obsolete("This property is deprecated, use FieldsimageAsGetFieldsImageQueryParameterType instead")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("fields%5Bimage%5D")]
+            public string[]? Fieldsimage { get; set; }
+#nullable restore
+#else
+            [QueryParameter("fields%5Bimage%5D")]
+            public string[] Fieldsimage { get; set; }
+#endif
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("fields%5Bimage%5D")]
+            public global::Klaviyo.Api.Campaigns.Item.CampaignMessages.GetFieldsImageQueryParameterType[]? FieldsimageAsGetFieldsImageQueryParameterType { get; set; }
+#nullable restore
+#else
+            [QueryParameter("fields%5Bimage%5D")]
+            public global::Klaviyo.Api.Campaigns.Item.CampaignMessages.GetFieldsImageQueryParameterType[] FieldsimageAsGetFieldsImageQueryParameterType { get; set; }
+#endif
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldstemplateAsGetFieldsTemplateQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -145,7 +166,7 @@ namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
             [QueryParameter("fields%5Btemplate%5D")]
             public string[] Fieldstemplate { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Btemplate%5D")]
@@ -155,7 +176,7 @@ namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
             [QueryParameter("fields%5Btemplate%5D")]
             public global::Klaviyo.Api.Campaigns.Item.CampaignMessages.GetFieldsTemplateQueryParameterType[] FieldstemplateAsGetFieldsTemplateQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
             [Obsolete("This property is deprecated, use IncludeAsGetIncludeQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -166,7 +187,7 @@ namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
             [QueryParameter("include")]
             public string[] Include { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include")]
@@ -181,7 +202,7 @@ namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CampaignMessagesRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.Campaigns.Item.CampaignMessages.CampaignMessagesRequestBuilder.CampaignMessagesRequestBuilderGetQueryParameters>
         {
         }

@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>The interval used to aggregate data within the series request.If hourly is used, the timeframe cannot be longer than 7 days.If daily is used, the timeframe cannot be longer than 60 days.If monthly is used, the timeframe cannot be longer than 52 weeks.</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SegmentSeriesRequestDTOResourceObject_attributes_interval
     {
         [EnumMember(Value = "daily")]

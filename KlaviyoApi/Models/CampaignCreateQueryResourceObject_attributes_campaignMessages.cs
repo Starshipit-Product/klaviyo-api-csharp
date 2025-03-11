@@ -10,7 +10,7 @@ namespace Klaviyo.Models
     /// <summary>
     /// The message(s) associated with the campaign
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CampaignCreateQueryResourceObject_attributes_campaignMessages : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

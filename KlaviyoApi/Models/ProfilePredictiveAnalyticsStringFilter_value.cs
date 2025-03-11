@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>Values for profile predictive analytics gender conditions.</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ProfilePredictiveAnalyticsStringFilter_value
     {
         [EnumMember(Value = "likely_female")]

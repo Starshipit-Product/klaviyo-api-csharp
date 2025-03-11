@@ -10,7 +10,7 @@ namespace Klaviyo.Models
     /// <summary>
     /// Array of catalog categories to delete.
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CatalogCategoryDeleteJobCreateQueryResourceObject_attributes_categories : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

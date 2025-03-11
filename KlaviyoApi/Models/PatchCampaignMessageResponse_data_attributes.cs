@@ -7,54 +7,30 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class PatchCampaignMessageResponse_data_attributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The channel the message is to be sent on</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Channel { get; set; }
-#nullable restore
-#else
-        public string Channel { get; set; }
-#endif
-        /// <summary>Additional attributes relating to the content of the message</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content? Content { get; set; }
-#nullable restore
-#else
-        public global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content Content { get; set; }
-#endif
         /// <summary>The datetime when the message was created</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The label or name on the message</summary>
+        /// <summary>The definition property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_definition? Definition { get; set; }
 #nullable restore
 #else
-        public string Label { get; set; }
-#endif
-        /// <summary>The render_options property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Klaviyo.Models.RenderOptionsSubObject? RenderOptions { get; set; }
-#nullable restore
-#else
-        public global::Klaviyo.Models.RenderOptionsSubObject RenderOptions { get; set; }
+        public global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_definition Definition { get; set; }
 #endif
         /// <summary>The list of appropriate Send Time Sub-objects associated with the message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Klaviyo.Models.SendTimeSubObject>? SendTimes { get; set; }
+        public List<global::Klaviyo.Models.SendTime>? SendTimes { get; set; }
 #nullable restore
 #else
-        public List<global::Klaviyo.Models.SendTimeSubObject> SendTimes { get; set; }
+        public List<global::Klaviyo.Models.SendTime> SendTimes { get; set; }
 #endif
         /// <summary>The datetime when the message was last updated</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -83,12 +59,9 @@ namespace Klaviyo.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetStringValue(); } },
-                { "content", n => { Content = n.GetObjectValue<global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content>(global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "label", n => { Label = n.GetStringValue(); } },
-                { "render_options", n => { RenderOptions = n.GetObjectValue<global::Klaviyo.Models.RenderOptionsSubObject>(global::Klaviyo.Models.RenderOptionsSubObject.CreateFromDiscriminatorValue); } },
-                { "send_times", n => { SendTimes = n.GetCollectionOfObjectValues<global::Klaviyo.Models.SendTimeSubObject>(global::Klaviyo.Models.SendTimeSubObject.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "definition", n => { Definition = n.GetObjectValue<global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_definition>(global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_definition.CreateFromDiscriminatorValue); } },
+                { "send_times", n => { SendTimes = n.GetCollectionOfObjectValues<global::Klaviyo.Models.SendTime>(global::Klaviyo.Models.SendTime.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -99,54 +72,75 @@ namespace Klaviyo.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("channel", Channel);
-            writer.WriteObjectValue<global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content>("content", Content);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
-            writer.WriteStringValue("label", Label);
-            writer.WriteObjectValue<global::Klaviyo.Models.RenderOptionsSubObject>("render_options", RenderOptions);
-            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.SendTimeSubObject>("send_times", SendTimes);
+            writer.WriteObjectValue<global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_definition>("definition", Definition);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.SendTime>("send_times", SendTimes);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.EmailContentSubObject"/>, <see cref="global::Klaviyo.Models.SMSContentSubObject"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.EmailMessageDefinition"/>, <see cref="global::Klaviyo.Models.MobilePushMessageSilentDefinition"/>, <see cref="global::Klaviyo.Models.MobilePushMessageStandardDefinition"/>, <see cref="global::Klaviyo.Models.SMSMessageDefinition"/>
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
-        public partial class PatchCampaignMessageResponse_data_attributes_content : IComposedTypeWrapper, IParsable
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PatchCampaignMessageResponse_data_attributes_definition : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.EmailContentSubObject"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.EmailMessageDefinition"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Klaviyo.Models.EmailContentSubObject? EmailContentSubObject { get; set; }
+            public global::Klaviyo.Models.EmailMessageDefinition? EmailMessageDefinition { get; set; }
 #nullable restore
 #else
-            public global::Klaviyo.Models.EmailContentSubObject EmailContentSubObject { get; set; }
+            public global::Klaviyo.Models.EmailMessageDefinition EmailMessageDefinition { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.SMSContentSubObject"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.MobilePushMessageSilentDefinition"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Klaviyo.Models.SMSContentSubObject? SMSContentSubObject { get; set; }
+            public global::Klaviyo.Models.MobilePushMessageSilentDefinition? MobilePushMessageSilentDefinition { get; set; }
 #nullable restore
 #else
-            public global::Klaviyo.Models.SMSContentSubObject SMSContentSubObject { get; set; }
+            public global::Klaviyo.Models.MobilePushMessageSilentDefinition MobilePushMessageSilentDefinition { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.MobilePushMessageStandardDefinition"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.MobilePushMessageStandardDefinition? MobilePushMessageStandardDefinition { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.MobilePushMessageStandardDefinition MobilePushMessageStandardDefinition { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.SMSMessageDefinition"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.SMSMessageDefinition? SMSMessageDefinition { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.SMSMessageDefinition SMSMessageDefinition { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_definition"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_definition CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content();
-                if("EmailContentSubObject".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                var result = new global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_definition();
+                if("EmailMessageDefinition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.EmailContentSubObject = new global::Klaviyo.Models.EmailContentSubObject();
+                    result.EmailMessageDefinition = new global::Klaviyo.Models.EmailMessageDefinition();
                 }
-                else if("SMSContentSubObject".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                else if("MobilePushMessageSilentDefinition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.SMSContentSubObject = new global::Klaviyo.Models.SMSContentSubObject();
+                    result.MobilePushMessageSilentDefinition = new global::Klaviyo.Models.MobilePushMessageSilentDefinition();
+                }
+                else if("MobilePushMessageStandardDefinition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.MobilePushMessageStandardDefinition = new global::Klaviyo.Models.MobilePushMessageStandardDefinition();
+                }
+                else if("SMSMessageDefinition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.SMSMessageDefinition = new global::Klaviyo.Models.SMSMessageDefinition();
                 }
                 return result;
             }
@@ -156,13 +150,21 @@ namespace Klaviyo.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(EmailContentSubObject != null)
+                if(EmailMessageDefinition != null)
                 {
-                    return EmailContentSubObject.GetFieldDeserializers();
+                    return EmailMessageDefinition.GetFieldDeserializers();
                 }
-                else if(SMSContentSubObject != null)
+                else if(MobilePushMessageSilentDefinition != null)
                 {
-                    return SMSContentSubObject.GetFieldDeserializers();
+                    return MobilePushMessageSilentDefinition.GetFieldDeserializers();
+                }
+                else if(MobilePushMessageStandardDefinition != null)
+                {
+                    return MobilePushMessageStandardDefinition.GetFieldDeserializers();
+                }
+                else if(SMSMessageDefinition != null)
+                {
+                    return SMSMessageDefinition.GetFieldDeserializers();
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -173,13 +175,21 @@ namespace Klaviyo.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
-                if(EmailContentSubObject != null)
+                if(EmailMessageDefinition != null)
                 {
-                    writer.WriteObjectValue<global::Klaviyo.Models.EmailContentSubObject>(null, EmailContentSubObject);
+                    writer.WriteObjectValue<global::Klaviyo.Models.EmailMessageDefinition>(null, EmailMessageDefinition);
                 }
-                else if(SMSContentSubObject != null)
+                else if(MobilePushMessageSilentDefinition != null)
                 {
-                    writer.WriteObjectValue<global::Klaviyo.Models.SMSContentSubObject>(null, SMSContentSubObject);
+                    writer.WriteObjectValue<global::Klaviyo.Models.MobilePushMessageSilentDefinition>(null, MobilePushMessageSilentDefinition);
+                }
+                else if(MobilePushMessageStandardDefinition != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.MobilePushMessageStandardDefinition>(null, MobilePushMessageStandardDefinition);
+                }
+                else if(SMSMessageDefinition != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.SMSMessageDefinition>(null, SMSMessageDefinition);
                 }
             }
         }

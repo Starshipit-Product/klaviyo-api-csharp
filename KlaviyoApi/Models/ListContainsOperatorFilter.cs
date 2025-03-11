@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class ListContainsOperatorFilter : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -71,7 +71,7 @@ namespace Klaviyo.Models
         /// <summary>
         /// Composed type wrapper for classes <see cref="int"/>, <see cref="string"/>
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ListContainsOperatorFilter_value : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="int"/></summary>

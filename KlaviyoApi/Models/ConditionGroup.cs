@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class ConditionGroup : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -61,9 +61,9 @@ namespace Klaviyo.Models
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.ProfileHasGroupMembershipCondition"/>, <see cref="global::Klaviyo.Models.ProfileMarketingConsentCondition"/>, <see cref="global::Klaviyo.Models.ProfileMetricCondition"/>, <see cref="global::Klaviyo.Models.ProfileNoGroupMembershipCondition"/>, <see cref="global::Klaviyo.Models.ProfilePostalCodeDistanceCondition"/>, <see cref="global::Klaviyo.Models.ProfilePredictiveAnalyticsNumericCondition"/>, <see cref="global::Klaviyo.Models.ProfilePredictiveAnalyticsStringCondition"/>, <see cref="global::Klaviyo.Models.ProfilePropertyCondition"/>, <see cref="global::Klaviyo.Models.ProfileRegionCondition"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.ProfileHasGroupMembershipCondition"/>, <see cref="global::Klaviyo.Models.ProfileMarketingConsentCondition"/>, <see cref="global::Klaviyo.Models.ProfileNoGroupMembershipCondition"/>, <see cref="global::Klaviyo.Models.ProfilePostalCodeDistanceCondition"/>, <see cref="global::Klaviyo.Models.ProfilePredictiveAnalyticsNumericCondition"/>, <see cref="global::Klaviyo.Models.ProfilePredictiveAnalyticsStringCondition"/>, <see cref="global::Klaviyo.Models.ProfilePropertyCondition"/>, <see cref="global::Klaviyo.Models.ProfileRegionCondition"/>, <see cref="global::Klaviyo.Models.SegmentsProfileMetricCondition"/>
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ConditionGroup_conditions : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ProfileHasGroupMembershipCondition"/></summary>
@@ -81,14 +81,6 @@ namespace Klaviyo.Models
 #nullable restore
 #else
             public global::Klaviyo.Models.ProfileMarketingConsentCondition ProfileMarketingConsentCondition { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ProfileMetricCondition"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Klaviyo.Models.ProfileMetricCondition? ProfileMetricCondition { get; set; }
-#nullable restore
-#else
-            public global::Klaviyo.Models.ProfileMetricCondition ProfileMetricCondition { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ProfileNoGroupMembershipCondition"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -138,6 +130,14 @@ namespace Klaviyo.Models
 #else
             public global::Klaviyo.Models.ProfileRegionCondition ProfileRegionCondition { get; set; }
 #endif
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.SegmentsProfileMetricCondition"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.SegmentsProfileMetricCondition? SegmentsProfileMetricCondition { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.SegmentsProfileMetricCondition SegmentsProfileMetricCondition { get; set; }
+#endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
@@ -155,10 +155,6 @@ namespace Klaviyo.Models
                 else if("ProfileMarketingConsentCondition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.ProfileMarketingConsentCondition = new global::Klaviyo.Models.ProfileMarketingConsentCondition();
-                }
-                else if("ProfileMetricCondition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ProfileMetricCondition = new global::Klaviyo.Models.ProfileMetricCondition();
                 }
                 else if("ProfileNoGroupMembershipCondition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
@@ -184,6 +180,10 @@ namespace Klaviyo.Models
                 {
                     result.ProfileRegionCondition = new global::Klaviyo.Models.ProfileRegionCondition();
                 }
+                else if("SegmentsProfileMetricCondition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.SegmentsProfileMetricCondition = new global::Klaviyo.Models.SegmentsProfileMetricCondition();
+                }
                 return result;
             }
             /// <summary>
@@ -199,10 +199,6 @@ namespace Klaviyo.Models
                 else if(ProfileMarketingConsentCondition != null)
                 {
                     return ProfileMarketingConsentCondition.GetFieldDeserializers();
-                }
-                else if(ProfileMetricCondition != null)
-                {
-                    return ProfileMetricCondition.GetFieldDeserializers();
                 }
                 else if(ProfileNoGroupMembershipCondition != null)
                 {
@@ -228,6 +224,10 @@ namespace Klaviyo.Models
                 {
                     return ProfileRegionCondition.GetFieldDeserializers();
                 }
+                else if(SegmentsProfileMetricCondition != null)
+                {
+                    return SegmentsProfileMetricCondition.GetFieldDeserializers();
+                }
                 return new Dictionary<string, Action<IParseNode>>();
             }
             /// <summary>
@@ -244,10 +244,6 @@ namespace Klaviyo.Models
                 else if(ProfileMarketingConsentCondition != null)
                 {
                     writer.WriteObjectValue<global::Klaviyo.Models.ProfileMarketingConsentCondition>(null, ProfileMarketingConsentCondition);
-                }
-                else if(ProfileMetricCondition != null)
-                {
-                    writer.WriteObjectValue<global::Klaviyo.Models.ProfileMetricCondition>(null, ProfileMetricCondition);
                 }
                 else if(ProfileNoGroupMembershipCondition != null)
                 {
@@ -272,6 +268,10 @@ namespace Klaviyo.Models
                 else if(ProfileRegionCondition != null)
                 {
                     writer.WriteObjectValue<global::Klaviyo.Models.ProfileRegionCondition>(null, ProfileRegionCondition);
+                }
+                else if(SegmentsProfileMetricCondition != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.SegmentsProfileMetricCondition>(null, SegmentsProfileMetricCondition);
                 }
             }
         }

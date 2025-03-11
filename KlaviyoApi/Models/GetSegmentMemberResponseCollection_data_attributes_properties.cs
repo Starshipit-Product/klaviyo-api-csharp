@@ -10,7 +10,7 @@ namespace Klaviyo.Models
     /// <summary>
     /// An object containing key/value pairs for any custom properties assigned to this profile
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetSegmentMemberResponseCollection_data_attributes_properties : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

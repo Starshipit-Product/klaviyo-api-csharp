@@ -14,7 +14,7 @@ namespace Klaviyo.Api.CatalogCategories.Item.Items
     /// <summary>
     /// Builds and executes requests for operations under \api\catalog-categories\{id}\items
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ItemsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
@@ -89,10 +89,10 @@ namespace Klaviyo.Api.CatalogCategories.Item.Items
         /// <summary>
         /// Get all items in a category with the given category ID.Items can be sorted by the following fields, in ascending and descending order:`created`Returns a maximum of 100 items per request.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `350/s`&lt;br&gt;Steady: `3500/m`**Scopes:**`catalogs:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ItemsRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldscatalogItemAsGetFieldsCatalogItemQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -103,7 +103,7 @@ namespace Klaviyo.Api.CatalogCategories.Item.Items
             [QueryParameter("fields%5Bcatalog%2Ditem%5D")]
             public string[] FieldscatalogItem { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bcatalog%2Ditem%5D")]
@@ -113,7 +113,7 @@ namespace Klaviyo.Api.CatalogCategories.Item.Items
             [QueryParameter("fields%5Bcatalog%2Ditem%5D")]
             public global::Klaviyo.Api.CatalogCategories.Item.Items.GetFieldsCatalogItemQueryParameterType[] FieldscatalogItemAsGetFieldsCatalogItemQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldscatalogVariantAsGetFieldsCatalogVariantQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -124,7 +124,7 @@ namespace Klaviyo.Api.CatalogCategories.Item.Items
             [QueryParameter("fields%5Bcatalog%2Dvariant%5D")]
             public string[] FieldscatalogVariant { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bcatalog%2Dvariant%5D")]
@@ -134,7 +134,7 @@ namespace Klaviyo.Api.CatalogCategories.Item.Items
             [QueryParameter("fields%5Bcatalog%2Dvariant%5D")]
             public global::Klaviyo.Api.CatalogCategories.Item.Items.GetFieldsCatalogVariantQueryParameterType[] FieldscatalogVariantAsGetFieldsCatalogVariantQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`ids`: `any`&lt;br&gt;`category.id`: `equals`&lt;br&gt;`title`: `contains`&lt;br&gt;`published`: `equals`</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`ids`: `any`&lt;br&gt;`category.id`: `equals`&lt;br&gt;`title`: `contains`&lt;br&gt;`published`: `equals`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -144,7 +144,7 @@ namespace Klaviyo.Api.CatalogCategories.Item.Items
             [QueryParameter("filter")]
             public string Filter { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
             [Obsolete("This property is deprecated, use IncludeAsGetIncludeQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -155,7 +155,7 @@ namespace Klaviyo.Api.CatalogCategories.Item.Items
             [QueryParameter("include")]
             public string[] Include { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include")]
@@ -165,7 +165,7 @@ namespace Klaviyo.Api.CatalogCategories.Item.Items
             [QueryParameter("include")]
             public global::Klaviyo.Api.CatalogCategories.Item.Items.GetIncludeQueryParameterType[] IncludeAsGetIncludeQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#pagination</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#pagination</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page%5Bcursor%5D")]
@@ -175,7 +175,7 @@ namespace Klaviyo.Api.CatalogCategories.Item.Items
             [QueryParameter("page%5Bcursor%5D")]
             public string Pagecursor { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -186,7 +186,7 @@ namespace Klaviyo.Api.CatalogCategories.Item.Items
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sorting</summary>
             [QueryParameter("sort")]
             public global::Klaviyo.Api.CatalogCategories.Item.Items.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
         }
@@ -194,7 +194,7 @@ namespace Klaviyo.Api.CatalogCategories.Item.Items
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ItemsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.CatalogCategories.Item.Items.ItemsRequestBuilder.ItemsRequestBuilderGetQueryParameters>
         {
         }

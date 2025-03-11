@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>The integration type. Currently only &quot;$custom&quot; is supported.</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CatalogItemCreateQueryResourceObject_attributes_integration_type
     {
         [EnumMember(Value = "$custom")]

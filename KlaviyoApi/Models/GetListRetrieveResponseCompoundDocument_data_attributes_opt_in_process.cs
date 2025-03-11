@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>The opt-in process for this list.  Could be either &apos;single_opt_in&apos; or &apos;double_opt_in&apos;.</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum GetListRetrieveResponseCompoundDocument_data_attributes_opt_in_process
     {
         [EnumMember(Value = "double_opt_in")]

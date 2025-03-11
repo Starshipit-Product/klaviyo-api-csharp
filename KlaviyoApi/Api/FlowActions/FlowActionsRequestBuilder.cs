@@ -12,7 +12,7 @@ namespace Klaviyo.Api.FlowActions
     /// <summary>
     /// Builds and executes requests for operations under \api\flow-actions
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FlowActionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Klaviyo.api.flowActions.item collection</summary>

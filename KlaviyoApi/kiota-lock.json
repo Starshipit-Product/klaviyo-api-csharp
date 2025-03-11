@@ -1,9 +1,10 @@
 {
-  "descriptionHash": "F42C7B811DD640F70FA8A2B7F2CC63E85BC21B3C38EB9A4E747C66046C73A041E87A3BB482D2D1A18A3C5DA8AAB5617346562A925A68AC839E561EAD2FD703DF",
+  "descriptionHash": "CA3BA4C7B325877FED3F8BF6E6DA2B51E180810C0CCC685F31135CEFE34B585BAA002AF87AE78E61019E5E8775E70DE6D3F6638CD21BC66B385C4FC3AB4CE69B",
   "descriptionLocation": "https://raw.githubusercontent.com/klaviyo/openapi/main/openapi/stable.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.18.0",
+  "kiotaVersion": "1.23.0",
   "clientClassName": "ApiClient",
+  "typeAccessModifier": "Public",
   "clientNamespaceName": "Klaviyo",
   "language": "CSharp",
   "usesBackingStore": false,

@@ -7,7 +7,7 @@ using System.IO;
 using System;
 namespace Klaviyo.Models
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
     public partial class PatchCampaignMessageResponse_data_relationships : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
@@ -21,6 +21,14 @@ namespace Klaviyo.Models
 #nullable restore
 #else
         public global::Klaviyo.Models.PatchCampaignMessageResponse_data_relationships_campaign Campaign { get; set; }
+#endif
+        /// <summary>The image property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Klaviyo.Models.PatchCampaignMessageResponse_data_relationships_image? Image { get; set; }
+#nullable restore
+#else
+        public global::Klaviyo.Models.PatchCampaignMessageResponse_data_relationships_image Image { get; set; }
 #endif
         /// <summary>The template property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,6 +64,7 @@ namespace Klaviyo.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "campaign", n => { Campaign = n.GetObjectValue<global::Klaviyo.Models.PatchCampaignMessageResponse_data_relationships_campaign>(global::Klaviyo.Models.PatchCampaignMessageResponse_data_relationships_campaign.CreateFromDiscriminatorValue); } },
+                { "image", n => { Image = n.GetObjectValue<global::Klaviyo.Models.PatchCampaignMessageResponse_data_relationships_image>(global::Klaviyo.Models.PatchCampaignMessageResponse_data_relationships_image.CreateFromDiscriminatorValue); } },
                 { "template", n => { Template = n.GetObjectValue<global::Klaviyo.Models.PatchCampaignMessageResponse_data_relationships_template>(global::Klaviyo.Models.PatchCampaignMessageResponse_data_relationships_template.CreateFromDiscriminatorValue); } },
             };
         }
@@ -67,6 +76,7 @@ namespace Klaviyo.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Klaviyo.Models.PatchCampaignMessageResponse_data_relationships_campaign>("campaign", Campaign);
+            writer.WriteObjectValue<global::Klaviyo.Models.PatchCampaignMessageResponse_data_relationships_image>("image", Image);
             writer.WriteObjectValue<global::Klaviyo.Models.PatchCampaignMessageResponse_data_relationships_template>("template", Template);
             writer.WriteAdditionalData(AdditionalData);
         }

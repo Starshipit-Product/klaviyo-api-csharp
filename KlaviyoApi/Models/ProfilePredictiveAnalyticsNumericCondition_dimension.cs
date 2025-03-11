@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>Dimensions for numeric profile predictive analytics conditions.</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ProfilePredictiveAnalyticsNumericCondition_dimension
     {
         [EnumMember(Value = "average_days_between_orders")]

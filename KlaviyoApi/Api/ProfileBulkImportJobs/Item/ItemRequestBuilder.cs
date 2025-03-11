@@ -18,7 +18,7 @@ namespace Klaviyo.Api.ProfileBulkImportJobs.Item
     /// <summary>
     /// Builds and executes requests for operations under \api\profile-bulk-import-jobs\{-id}
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The importErrors property</summary>
@@ -113,10 +113,10 @@ namespace Klaviyo.Api.ProfileBulkImportJobs.Item
         /// <summary>
         /// Get a bulk profile import job with the given job ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`lists:read``profiles:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldslistAsGetFieldsListQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -127,7 +127,7 @@ namespace Klaviyo.Api.ProfileBulkImportJobs.Item
             [QueryParameter("fields%5Blist%5D")]
             public string[] Fieldslist { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Blist%5D")]
@@ -137,7 +137,7 @@ namespace Klaviyo.Api.ProfileBulkImportJobs.Item
             [QueryParameter("fields%5Blist%5D")]
             public global::Klaviyo.Api.ProfileBulkImportJobs.Item.GetFieldsListQueryParameterType[] FieldslistAsGetFieldsListQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsprofileBulkImportJobAsGetFieldsProfileBulkImportJobQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -148,7 +148,7 @@ namespace Klaviyo.Api.ProfileBulkImportJobs.Item
             [QueryParameter("fields%5Bprofile%2Dbulk%2Dimport%2Djob%5D")]
             public string[] FieldsprofileBulkImportJob { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bprofile%2Dbulk%2Dimport%2Djob%5D")]
@@ -158,7 +158,7 @@ namespace Klaviyo.Api.ProfileBulkImportJobs.Item
             [QueryParameter("fields%5Bprofile%2Dbulk%2Dimport%2Djob%5D")]
             public global::Klaviyo.Api.ProfileBulkImportJobs.Item.GetFieldsProfileBulkImportJobQueryParameterType[] FieldsprofileBulkImportJobAsGetFieldsProfileBulkImportJobQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
             [Obsolete("This property is deprecated, use IncludeAsGetIncludeQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -169,7 +169,7 @@ namespace Klaviyo.Api.ProfileBulkImportJobs.Item
             [QueryParameter("include")]
             public string[] Include { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include")]
@@ -184,7 +184,7 @@ namespace Klaviyo.Api.ProfileBulkImportJobs.Item
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ItemRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.ProfileBulkImportJobs.Item.ItemRequestBuilder.ItemRequestBuilderGetQueryParameters>
         {
         }

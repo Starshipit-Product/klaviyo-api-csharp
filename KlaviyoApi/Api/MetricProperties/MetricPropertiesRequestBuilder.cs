@@ -12,7 +12,7 @@ namespace Klaviyo.Api.MetricProperties
     /// <summary>
     /// Builds and executes requests for operations under \api\metric-properties
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MetricPropertiesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Klaviyo.api.metricProperties.item collection</summary>

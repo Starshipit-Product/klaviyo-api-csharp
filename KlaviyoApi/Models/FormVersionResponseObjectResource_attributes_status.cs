@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>Status of the form version. &quot;live&quot; means it&apos;s live on site.</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum FormVersionResponseObjectResource_attributes_status
     {
         [EnumMember(Value = "draft")]

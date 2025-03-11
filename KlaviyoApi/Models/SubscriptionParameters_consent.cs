@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>The Consent status to be set as part of the subscribe call. Currently supports &quot;SUBSCRIBED&quot;.</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SubscriptionParameters_consent
     {
         [EnumMember(Value = "SUBSCRIBED")]

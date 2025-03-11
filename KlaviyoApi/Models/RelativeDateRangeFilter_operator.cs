@@ -4,7 +4,7 @@ using System;
 namespace Klaviyo.Models
 {
     /// <summary>Operators for relative date range filters.e.g. &quot;between 10 and 20 days ago&quot;</summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum RelativeDateRangeFilter_operator
     {
         [EnumMember(Value = "between")]

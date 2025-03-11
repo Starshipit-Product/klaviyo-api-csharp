@@ -16,7 +16,7 @@ namespace Klaviyo.Api.Forms.Item
     /// <summary>
     /// Builds and executes requests for operations under \api\forms\{id}
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FormsItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The formVersions property</summary>
@@ -101,10 +101,10 @@ namespace Klaviyo.Api.Forms.Item
         /// <summary>
         /// Get the form with the given ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`forms:read`
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FormsItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsformAsGetFieldsFormQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -115,7 +115,7 @@ namespace Klaviyo.Api.Forms.Item
             [QueryParameter("fields%5Bform%5D")]
             public string[] Fieldsform { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bform%5D")]
@@ -125,7 +125,7 @@ namespace Klaviyo.Api.Forms.Item
             [QueryParameter("fields%5Bform%5D")]
             public global::Klaviyo.Api.Forms.Item.GetFieldsFormQueryParameterType[] FieldsformAsGetFieldsFormQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsformVersionAsGetFieldsFormVersionQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -136,7 +136,7 @@ namespace Klaviyo.Api.Forms.Item
             [QueryParameter("fields%5Bform%2Dversion%5D")]
             public string[] FieldsformVersion { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bform%2Dversion%5D")]
@@ -146,7 +146,7 @@ namespace Klaviyo.Api.Forms.Item
             [QueryParameter("fields%5Bform%2Dversion%5D")]
             public global::Klaviyo.Api.Forms.Item.GetFieldsFormVersionQueryParameterType[] FieldsformVersionAsGetFieldsFormVersionQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
             [Obsolete("This property is deprecated, use IncludeAsGetIncludeQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -157,7 +157,7 @@ namespace Klaviyo.Api.Forms.Item
             [QueryParameter("include")]
             public string[] Include { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2025-01-15/reference/api-overview#relationships</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include")]
@@ -172,7 +172,7 @@ namespace Klaviyo.Api.Forms.Item
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FormsItemRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.Forms.Item.FormsItemRequestBuilder.FormsItemRequestBuilderGetQueryParameters>
         {
         }

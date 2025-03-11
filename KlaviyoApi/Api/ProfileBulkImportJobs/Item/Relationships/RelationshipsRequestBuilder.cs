@@ -13,7 +13,7 @@ namespace Klaviyo.Api.ProfileBulkImportJobs.Item.Relationships
     /// <summary>
     /// Builds and executes requests for operations under \api\profile-bulk-import-jobs\{-id}\relationships
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+    [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RelationshipsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The lists property</summary>
